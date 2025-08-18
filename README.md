@@ -10,7 +10,7 @@
   <a href="https://www.linkedin.com/in/diego-fernando-lojan-tenesaca-536615272/" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin&logoColor=white" />
   </a>
-  <a href="mailto:diego@example.com">
+  <a href="fernando.lojan10@gmail.com">
     <img src="https://img.shields.io/badge/Gmail-Contacto-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
   </a>
   <a href="https://diegofernandolojantn.github.io/PortfolioLD/" target="_blank">
