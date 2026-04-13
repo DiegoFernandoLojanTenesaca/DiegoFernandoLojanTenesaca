@@ -51,6 +51,8 @@ class DiegoLojan:
         }
 ```
 
+> Currently building AI microservices & autonomous agents at **DataGlov S.A.S.**
+
 ---
 
 ### Stack
@@ -165,22 +167,19 @@ class DiegoLojan:
 ### GitHub Stats
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=DiegoFernandoLojanTenesaca&show_icons=true&theme=tokyonight&count_private=true&hide_border=true&bg_color=0a0a0f" height="170"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=DiegoFernandoLojanTenesaca&layout=compact&theme=tokyonight&hide_border=true&bg_color=0a0a0f" height="170"/>
-</p>
-
-<p align="center">
   <img src="https://github-readme-streak-stats.herokuapp.com?user=DiegoFernandoLojanTenesaca&theme=tokyonight&hide_border=true&background=0a0a0f&ring=6366f1&fire=818cf8&currStreakLabel=818cf8" height="170"/>
-</p>
-
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=DiegoFernandoLojanTenesaca&theme=tokyo-night&hide_border=true&bg_color=0a0a0f&color=818cf8&line=6366f1&point=e4e4e7&area=true&area_color=6366f1" width="95%"/>
 </p>
 
 ---
 
+### Contribution Snake
+
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=DiegoFernandoLojanTenesaca&theme=tokyonight&no-frame=true&no-bg=true&column=7&margin-w=5" width="95%"/>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/DiegoFernandoLojanTenesaca/DiegoFernandoLojanTenesaca/output/github-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/DiegoFernandoLojanTenesaca/DiegoFernandoLojanTenesaca/output/github-snake.svg" />
+    <img alt="Snake animation" src="https://raw.githubusercontent.com/DiegoFernandoLojanTenesaca/DiegoFernandoLojanTenesaca/output/github-snake-dark.svg" />
+  </picture>
 </p>
 
 ---
