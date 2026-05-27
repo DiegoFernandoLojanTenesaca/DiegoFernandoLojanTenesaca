@@ -11,6 +11,9 @@
   <a href="https://diegofernandolojantenesaca.github.io" target="_blank">
     <img src="https://img.shields.io/badge/Portfolio-6366f1?style=for-the-badge&logo=astro&logoColor=white" />
   </a>
+  <a href="https://www.indagalab.com" target="_blank">
+    <img src="https://img.shields.io/badge/Indaga%20Lab-0F172A?style=for-the-badge&logo=vercel&logoColor=white" />
+  </a>
   <a href="https://www.linkedin.com/in/diego-fernando-lojan-37b54623b" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
   </a>
@@ -35,24 +38,26 @@
 
 ```python
 class DiegoLojan:
-    role      = "Data & AI Engineer @ DataGlov S.A.S."
+    role      = "Data & AI Engineer @ Dataglov S.A.S."
     education = "Ing. Ciencias de la Computacion - UNL"
     exchange  = "Universidad Tecnologica del Peru (UTP) - Lima"
     location  = "Loja, Ecuador"
 
     languages = ["Python", "TypeScript", "JavaScript", "SQL"]
-    interests = ["AI Engineering", "Data Pipelines", "Full Stack", "Local LLMs"]
+    interests = ["AI Engineering", "Data Pipelines", "Full Stack", "Applied NLP"]
 
     def current_work(self):
         return {
-            "ai_microservices": "16 dominios funcionales en produccion",
-            "semantic_search": "64K+ conversaciones indexadas con pgvector",
-            "local_models": "Traduccion, transcripcion y moderacion en CPU",
-            "agents": "Orquestacion autonoma con LangGraph + Groq",
+            "ai_microservices": "Arquitectura DDD multi-tenant en produccion",
+            "semantic_search":  "Embeddings multilingues + pgvector",
+            "agents":           "Orquestacion con LangGraph y tool calling",
+            "vision":           "Vision-Language Models self-hosted",
+            "research":         "Paper aceptado en Springer (CIT 2026)",
+            "freelance":        "Indaga Lab - paraguas propio de IA y software",
         }
 ```
 
-> Currently building AI microservices & autonomous agents at **DataGlov S.A.S.**
+> Currently building AI microservices & autonomous agents at **Dataglov S.A.S.** and running my own freelance lab **Indaga Lab**.
 
 ---
 
@@ -66,15 +71,11 @@ class DiegoLojan:
 
 <img src="https://img.shields.io/badge/-LangChain-1C3C3C?style=flat-square&logo=langchain&logoColor=white" />
 <img src="https://img.shields.io/badge/-LangGraph-1C3C3C?style=flat-square&logo=langchain&logoColor=white" />
-<img src="https://img.shields.io/badge/-Groq-F55036?style=flat-square&logo=groq&logoColor=white" />
 <img src="https://img.shields.io/badge/-pgvector-336791?style=flat-square&logo=postgresql&logoColor=white" />
 <img src="https://img.shields.io/badge/-Scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white" />
 <img src="https://img.shields.io/badge/-Optuna-0F1B2D?style=flat-square&logo=python&logoColor=white" />
 <img src="https://img.shields.io/badge/-Pandas-150458?style=flat-square&logo=pandas&logoColor=white" />
 <img src="https://img.shields.io/badge/-spaCy-09A3D5?style=flat-square&logo=spacy&logoColor=white" />
-<img src="https://img.shields.io/badge/-Vosk-4B8BBE?style=flat-square&logo=python&logoColor=white" />
-<img src="https://img.shields.io/badge/-faster--whisper-74aa9c?style=flat-square&logo=openai&logoColor=white" />
-<img src="https://img.shields.io/badge/-ONNX-005CED?style=flat-square&logo=onnx&logoColor=white" />
 <img src="https://img.shields.io/badge/-SHAP-FF6F00?style=flat-square&logoColor=white" />
 <img src="https://img.shields.io/badge/-Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white" />
 
@@ -113,18 +114,36 @@ class DiegoLojan:
 <tr>
 <td width="50%">
 
-**Sudial** `Privado`
-> Plataforma SaaS multi-tenant de comunicacion empresarial via WhatsApp. 190+ componentes React, 90+ endpoints API, 80+ modelos de BD. Chatbot builder visual, CRM, citas, inventario y app movil de 45 pantallas.
+[**Indaga Lab**](https://www.indagalab.com) `Privado`
+> Mi marca paraguas freelance: portal de servicios t&eacute;cnicos y de IA (consultor&iacute;a, tesis, sistemas a medida) y submarca de chatbots empresariales con cotizador IA y backoffice en [wauto.indagalab.com](https://wauto.indagalab.com).
 
-`React` `Next.js` `Python` `Pyramid` `PostgreSQL` `Redis` `WebSockets` `React Native`
+`Next.js` `FastAPI` `LangGraph` `PostgreSQL` `i18n`
 
 </td>
 <td width="50%">
 
-**Sudial AI** `Privado`
-> Microservicio de IA con 16 dominios funcionales. Busqueda semantica con BGE-M3 + pgvector, agentes autonomos con LangGraph, clasificacion zero-shot, traduccion y transcripcion local en CPU. 64K+ conversaciones.
+[**Kumbre**](https://kumbre.onrender.com/) `Extensi&oacute;n de Indaga Lab`
+> Herramienta vertical para constructoras: gesti&oacute;n de APUs (An&aacute;lisis de Precios Unitarios) en cotizaci&oacute;n y obra. Convierte presupuestos PDF (formato SERCOP) a Excel editable con parsing inteligente, fuzzy matching y cat&aacute;logo precargado.
 
-`FastAPI` `LangChain` `LangGraph` `Groq` `pgvector` `Vosk` `spaCy` `Docker`
+`Next.js` `FastAPI` `PostgreSQL`
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+**Sudial AI** `Privado`
+> Microservicio de IA en producci&oacute;n con arquitectura DDD multi-tenant. B&uacute;squeda sem&aacute;ntica con embeddings multiling&uuml;es, agente conversacional con orquestaci&oacute;n de herramientas, clasificaci&oacute;n zero-shot, OCR estructurado, transcripci&oacute;n local y moderaci&oacute;n.
+
+`FastAPI` `LangChain` `LangGraph` `pgvector` `Docker`
+
+</td>
+<td width="50%">
+
+**Sudial** `Privado`
+> Plataforma SaaS multi-tenant para chatbots WhatsApp empresariales. Backoffice web, app m&oacute;vil y backend de mensajer&iacute;a con builder visual de flujos, CRM, citas e inventario.
+
+`Next.js` `React Native` `Python` `PostgreSQL` `Redis` `WebSockets`
 
 </td>
 </tr>
@@ -132,57 +151,45 @@ class DiegoLojan:
 <td width="50%">
 
 [**Ecuador Energy Anomalies**](https://github.com/DiegoFernandoLojanTenesaca/ecuador-energy-anomalies)
-> Deteccion multi-tecnica de crisis energeticas en 8 paises LATAM. Consenso de 3 algoritmos (Isolation Forest + STL + CUSUM) con F1=0.750. Validado contra crisis real Ecuador 2024.
+> Detecci&oacute;n multi-t&eacute;cnica de crisis energ&eacute;ticas en LATAM con consenso de algoritmos (Isolation Forest, STL, CUSUM), validaci&oacute;n cruzada y dashboard interactivo.
 
-`Python` `Scikit-learn` `Optuna` `SHAP` `Plotly` `Streamlit`
-
-</td>
-<td width="50%">
-
-[**Kumbre**](https://kumbre.onrender.com/)
-> SaaS para construccion: convierte PDFs de presupuestos (APUs) a Excel con parsing inteligente y fuzzy matching. Planes Free/Silver/Gold/Platinum.
-
-`Next.js` `FastAPI` `PostgreSQL` `Supabase` `Cloudflare`
-
-</td>
-</tr>
-<tr>
-<td width="50%">
-
-[**LeaderGym**](https://leader-gym.vercel.app) &nbsp; [<img src="https://img.shields.io/badge/code-GitHub-333?style=flat-square&logo=github" />](https://github.com/DiegoFernandoLojanTenesaca/LeaderGym)
-> Landing page profesional para gimnasio real. Mobile-first, animaciones scroll, carrusel de servicios, planes de membresia y WhatsApp Business.
-
-`Astro` `Tailwind CSS` `Vercel` `SEO`
+`Python` `Scikit-learn` `Optuna` `SHAP` `Streamlit`
 
 </td>
 <td width="50%">
 
-[**Machine Learning Hub**](https://github.com/DiegoFernandoLojanTenesaca/MachineLearning_Hub)
-> Portafolio de ML aplicado: deteccion de phishing, clasificacion de spam, fraude financiero, vision por computadora y prediccion deportiva.
-
-`Python` `Scikit-learn` `Jupyter` `NLP` `Pandas`
-
-</td>
-</tr>
-<tr>
-<td width="50%">
-
-[**Analisis Electoral Ecuador 2025**](https://github.com/DiegoFernandoLojanTenesaca/Elecciones-ecuador-2025-analisis) &nbsp; [<img src="https://img.shields.io/badge/dataset-Kaggle-20BEFF?style=flat-square&logo=kaggle" />](https://www.kaggle.com/datasets/diegofernandoljtn/elecciones-presidenciales-de-ecuador-2025-json)
-> EDA y modelos predictivos con datos del CNE. Web scraping con Selenium. Dataset en Kaggle con 227+ vistas.
-
-`Python` `Selenium` `Pandas` `Jupyter`
-
-</td>
-<td width="50%">
-
-[**Deteccion de Estres en Redes Sociales**](https://github.com/DiegoFernandoLojanTenesaca/TIC_Analisis_Sentimientos_SVM_OPTUNA)
-> Proyecto de titulacion: analisis de sentimientos en tweets con SVM optimizado (Optuna TPE). Embeddings FastText, scraping con Playwright.
+[**Detecci&oacute;n de Estr&eacute;s en Espa&ntilde;ol**](https://github.com/DiegoFernandoLojanTenesaca/TIC_Analisis_Sentimientos_SVM_OPTUNA)
+> Investigaci&oacute;n aplicada en NLP espa&ntilde;ol: SVM optimizado v&iacute;a TPE (Optuna) sobre tweets de la crisis energ&eacute;tica 2024. **Paper aceptado en Springer / CIT 2026 (en producci&oacute;n).**
 
 `Python` `SVM` `Optuna` `NLP` `CRISP-DM`
 
 </td>
 </tr>
+<tr>
+<td width="50%">
+
+[**Orbyn Lead Qualifier**](https://github.com/DiegoFernandoLojanTenesaca/orbyn-lead-qualifier)
+> Bot de Telegram que califica leads contra un ICP con LLM y failover autom&aacute;tico entre proveedores. Grafo LangGraph con prompts versionados y validaci&oacute;n estricta de salida (JSON).
+
+`Python` `LangGraph` `Telegram` `SQLite` `Google Sheets`
+
+</td>
+<td width="50%">
+
+[**LeaderGym**](https://leader-gym.vercel.app) &nbsp; [<img src="https://img.shields.io/badge/code-GitHub-333?style=flat-square&logo=github" />](https://github.com/DiegoFernandoLojanTenesaca/LeaderGym)
+> Landing page profesional para gimnasio real. Mobile-first, animaciones scroll, carrusel de servicios, planes de membres&iacute;a y WhatsApp Business.
+
+`Astro` `Tailwind CSS` `SEO`
+
+</td>
+</tr>
 </table>
+
+---
+
+### Publicaciones
+
+> **Lojan, D. F.; Chamba-Eras, L.** &mdash; *Bayesian Hyperparameter Optimization of Support Vector Machines Using TPE for Stress Detection in Spanish Social Media During the 2024 Ecuadorian Energy Crisis*. En *Emerging Research in Intelligent Systems. Proceedings of the CIT 2026*, Springer Nature. **(Aceptado, en producci&oacute;n)**
 
 ---
 
@@ -214,7 +221,7 @@ class DiegoLojan:
 ---
 
 <p align="center">
-  <em>De la arquitectura de software a los modelos de IA &mdash; dise&ntilde;o, construyo y despliego sistemas completos en producci&oacute;n.</em>
+  <em>De la ingenier&iacute;a de software a los modelos de IA y la investigaci&oacute;n aplicada &mdash; dise&ntilde;o, construyo, despliego y publico.</em>
 </p>
 
 <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=6366f1&height=120&section=footer"/>
