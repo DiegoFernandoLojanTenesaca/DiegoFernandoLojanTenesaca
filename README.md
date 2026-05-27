@@ -122,7 +122,7 @@ class DiegoLojan:
 </td>
 <td width="50%">
 
-[**Kumbre**](https://kumbre.onrender.com/) `Extensi&oacute;n de Indaga Lab`
+[**Kumbre**](https://kumbre.onrender.com/) `Extension de Indaga Lab`
 > Herramienta vertical para constructoras: gesti&oacute;n de APUs (An&aacute;lisis de Precios Unitarios) en cotizaci&oacute;n y obra. Convierte presupuestos PDF (formato SERCOP) a Excel editable con parsing inteligente, fuzzy matching y cat&aacute;logo precargado.
 
 `Next.js` `FastAPI` `PostgreSQL`
