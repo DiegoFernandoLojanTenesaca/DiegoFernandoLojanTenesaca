@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="460" height="380" viewBox="0 0 460 380" role="img" aria-label="skills.radar">
+<style>@keyframes grow { from { transform: scale(.55) } to { transform: none } } .shape { transform-origin: 230px 200px; animation: grow 1.2s cubic-bezier(.2,.8,.2,1) both }</style>
+<rect width="460" height="380" rx="14" fill="#FFFFFF" stroke="#D4D4D4"/>
+<text x="20.0" y="30.0" fill="#111111" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13" font-weight="700">skills.radar</text>
+<text x="440.0" y="30.0" fill="#6E6E6E" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="10" text-anchor="end">autoevaluación · 0-100</text>
+<polygon points="230.0,170.5 250.9,179.1 259.5,200.0 250.9,220.9 230.0,229.5 209.1,220.9 200.5,200.0 209.1,179.1" fill="none" stroke="#D4D4D4"/>
+<polygon points="230.0,141.0 271.7,158.3 289.0,200.0 271.7,241.7 230.0,259.0 188.3,241.7 171.0,200.0 188.3,158.3" fill="none" stroke="#D4D4D4"/>
+<polygon points="230.0,111.5 292.6,137.4 318.5,200.0 292.6,262.6 230.0,288.5 167.4,262.6 141.5,200.0 167.4,137.4" fill="none" stroke="#D4D4D4"/>
+<polygon points="230.0,82.0 313.4,116.6 348.0,200.0 313.4,283.4 230.0,318.0 146.6,283.4 112.0,200.0 146.6,116.6" fill="none" stroke="#D4D4D4"/>
+<path d="M230 200L230.0 82.0" stroke="#D4D4D4"/>
+<text x="230.0" y="64.0" fill="#111111" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="11" text-anchor="middle">LLMs y agentes</text>
+<path d="M230 200L313.4 116.6" stroke="#D4D4D4"/>
+<text x="329.0" y="105.0" fill="#111111" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="11" text-anchor="start">RAG y vectores</text>
+<path d="M230 200L348.0 200.0" stroke="#D4D4D4"/>
+<text x="370.0" y="204.0" fill="#111111" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="11" text-anchor="start">Datos / ETL</text>
+<path d="M230 200L313.4 283.4" stroke="#D4D4D4"/>
+<text x="329.0" y="303.0" fill="#111111" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="11" text-anchor="start">Machine learning</text>
+<path d="M230 200L230.0 318.0" stroke="#D4D4D4"/>
+<text x="230.0" y="344.0" fill="#111111" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="11" text-anchor="middle">Backend</text>
+<path d="M230 200L146.6 283.4" stroke="#D4D4D4"/>
+<text x="131.0" y="303.0" fill="#111111" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="11" text-anchor="end">Frontend</text>
+<path d="M230 200L112.0 200.0" stroke="#D4D4D4"/>
+<text x="90.0" y="204.0" fill="#111111" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="11" text-anchor="end">Móvil</text>
+<path d="M230 200L146.6 116.6" stroke="#D4D4D4"/>
+<text x="131.0" y="105.0" fill="#111111" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="11" text-anchor="end">DevOps</text>
+<g class="shape"><polygon points="230.0,99.7 300.9,129.1 318.5,200.0 292.6,262.6 230.0,300.3 171.6,258.4 165.1,200.0 179.9,149.9" fill="#111111" fill-opacity=".22" stroke="#111111" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="230.0" cy="99.7" r="3.5" fill="#3A3A3A"/>
+<circle cx="300.9" cy="129.1" r="3.5" fill="#3A3A3A"/>
+<circle cx="318.5" cy="200.0" r="3.5" fill="#3A3A3A"/>
+<circle cx="292.6" cy="262.6" r="3.5" fill="#3A3A3A"/>
+<circle cx="230.0" cy="300.3" r="3.5" fill="#3A3A3A"/>
+<circle cx="171.6" cy="258.4" r="3.5" fill="#3A3A3A"/>
+<circle cx="165.1" cy="200.0" r="3.5" fill="#3A3A3A"/>
+<circle cx="179.9" cy="149.9" r="3.5" fill="#3A3A3A"/>
+</g></svg>

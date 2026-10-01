@@ -11,12 +11,12 @@
 <br>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=24&duration=2800&pause=900&color=FFFFFF&center=true&vCenter=true&width=900&lines=Diego+Fernando+Lojan+Tenesaca;Data+%26+AI+Engineer+%C2%B7+Ecuador;LLMs+%C2%B7+RAG+%C2%B7+Agentes+%C2%B7+ML+en+producci%C3%B3n;Python+%C2%B7+Rust+%C2%B7+TypeScript+%C2%B7+SQL">
-  <source media="(prefers-color-scheme: light)" srcset="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=24&duration=2800&pause=900&color=111111&center=true&vCenter=true&width=900&lines=Diego+Fernando+Lojan+Tenesaca;Data+%26+AI+Engineer+%C2%B7+Ecuador;LLMs+%C2%B7+RAG+%C2%B7+Agentes+%C2%B7+ML+en+producci%C3%B3n;Python+%C2%B7+Rust+%C2%B7+TypeScript+%C2%B7+SQL">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=24&duration=2800&pause=900&color=111111&center=true&vCenter=true&width=900&lines=Diego+Fernando+Lojan+Tenesaca;Data+%26+AI+Engineer+%C2%B7+Ecuador;LLMs+%C2%B7+RAG+%C2%B7+Agentes+%C2%B7+ML+en+producci%C3%B3n;Python+%C2%B7+Rust+%C2%B7+TypeScript+%C2%B7+SQL" alt="Diego Fernando Lojan Tenesaca, Data &amp; AI Engineer">
+  <source media="(prefers-color-scheme: dark)" srcset="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=24&duration=2800&pause=900&color={{accent}}&center=true&vCenter=true&width=900&lines=Diego+Fernando+Lojan+Tenesaca;Data+%26+AI+Engineer+%C2%B7+Ecuador;LLMs+%C2%B7+RAG+%C2%B7+Agentes+%C2%B7+ML+en+producci%C3%B3n;Python+%C2%B7+Rust+%C2%B7+TypeScript+%C2%B7+SQL">
+  <source media="(prefers-color-scheme: light)" srcset="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=24&duration=2800&pause=900&color={{light_accent}}&center=true&vCenter=true&width=900&lines=Diego+Fernando+Lojan+Tenesaca;Data+%26+AI+Engineer+%C2%B7+Ecuador;LLMs+%C2%B7+RAG+%C2%B7+Agentes+%C2%B7+ML+en+producci%C3%B3n;Python+%C2%B7+Rust+%C2%B7+TypeScript+%C2%B7+SQL">
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=24&duration=2800&pause=900&color={{light_accent}}&center=true&vCenter=true&width=900&lines=Diego+Fernando+Lojan+Tenesaca;Data+%26+AI+Engineer+%C2%B7+Ecuador;LLMs+%C2%B7+RAG+%C2%B7+Agentes+%C2%B7+ML+en+producci%C3%B3n;Python+%C2%B7+Rust+%C2%B7+TypeScript+%C2%B7+SQL" alt="Diego Fernando Lojan Tenesaca, Data &amp; AI Engineer">
 </picture>
 
-<img src="https://komarev.com/ghpvc/?username=DiegoFernandoLojanTenesaca&style=flat&color=FFFFFF&label=visitas" alt="visitas al perfil">
+<img src="https://komarev.com/ghpvc/?username=DiegoFernandoLojanTenesaca&style=flat&color={{accent}}&label=visitas" alt="visitas al perfil">
 
 </div>
 
@@ -57,63 +57,63 @@
   <tbody>
     <tr>
       <td width="50%" valign="top"><code>├─ ◆ ia_ml:</code><br><br>
-        <img src="https://cdn.simpleicons.org/python/8C8C8C" height="34" alt="Python">
-        <img src="https://cdn.simpleicons.org/scikitlearn/8C8C8C" height="34" alt="scikit-learn">
-        <img src="https://cdn.simpleicons.org/opencv/8C8C8C" height="34" alt="OpenCV">
-        <img src="https://cdn.simpleicons.org/langchain/8C8C8C" height="34" alt="LangChain">
-        <img src="https://cdn.simpleicons.org/huggingface/8C8C8C" height="34" alt="Hugging Face">
-        <img src="https://cdn.simpleicons.org/ollama/8C8C8C" height="34" alt="Ollama">
-        <img src="https://cdn.simpleicons.org/anthropic/8C8C8C" height="34" alt="Claude">
-        <img src="https://cdn.simpleicons.org/onnx/8C8C8C" height="34" alt="ONNX">
-        <img src="https://cdn.simpleicons.org/optuna/8C8C8C" height="34" alt="Optuna"><br>
+        <img src="https://cdn.simpleicons.org/python/{{muted}}" height="34" alt="Python">
+        <img src="https://cdn.simpleicons.org/scikitlearn/{{muted}}" height="34" alt="scikit-learn">
+        <img src="https://cdn.simpleicons.org/opencv/{{muted}}" height="34" alt="OpenCV">
+        <img src="https://cdn.simpleicons.org/langchain/{{muted}}" height="34" alt="LangChain">
+        <img src="https://cdn.simpleicons.org/huggingface/{{muted}}" height="34" alt="Hugging Face">
+        <img src="https://cdn.simpleicons.org/ollama/{{muted}}" height="34" alt="Ollama">
+        <img src="https://cdn.simpleicons.org/anthropic/{{muted}}" height="34" alt="Claude">
+        <img src="https://cdn.simpleicons.org/onnx/{{muted}}" height="34" alt="ONNX">
+        <img src="https://cdn.simpleicons.org/optuna/{{muted}}" height="34" alt="Optuna"><br>
         <sub><code>Python · scikit-learn · OpenCV · LangChain · LangGraph · Hugging Face · Ollama · Claude · ONNX · Optuna</code></sub>
       </td>
       <td width="50%" valign="top"><code>├─ ▣ datos:</code><br><br>
-        <img src="https://cdn.simpleicons.org/postgresql/8C8C8C" height="34" alt="PostgreSQL">
-        <img src="https://cdn.simpleicons.org/apachekafka/8C8C8C" height="34" alt="Kafka">
-        <img src="https://cdn.simpleicons.org/duckdb/8C8C8C" height="34" alt="DuckDB">
-        <img src="https://cdn.simpleicons.org/sqlite/8C8C8C" height="34" alt="SQLite">
-        <img src="https://cdn.simpleicons.org/pandas/8C8C8C" height="34" alt="Pandas">
-        <img src="https://cdn.simpleicons.org/numpy/8C8C8C" height="34" alt="NumPy">
-        <img src="https://cdn.simpleicons.org/jupyter/8C8C8C" height="34" alt="Jupyter"><br>
+        <img src="https://cdn.simpleicons.org/postgresql/{{muted}}" height="34" alt="PostgreSQL">
+        <img src="https://cdn.simpleicons.org/apachekafka/{{muted}}" height="34" alt="Kafka">
+        <img src="https://cdn.simpleicons.org/duckdb/{{muted}}" height="34" alt="DuckDB">
+        <img src="https://cdn.simpleicons.org/sqlite/{{muted}}" height="34" alt="SQLite">
+        <img src="https://cdn.simpleicons.org/pandas/{{muted}}" height="34" alt="Pandas">
+        <img src="https://cdn.simpleicons.org/numpy/{{muted}}" height="34" alt="NumPy">
+        <img src="https://cdn.simpleicons.org/jupyter/{{muted}}" height="34" alt="Jupyter"><br>
         <sub><code>PostgreSQL + pgvector · Kafka · DuckDB · dbt · SQLite · Pandas · NumPy · Jupyter</code></sub>
       </td>
     </tr>
     <tr>
       <td width="50%" valign="top"><code>├─ ⚙ backend:</code><br><br>
-        <img src="https://cdn.simpleicons.org/fastapi/8C8C8C" height="34" alt="FastAPI">
-        <img src="https://cdn.simpleicons.org/django/8C8C8C" height="34" alt="Django">
-        <img src="https://cdn.simpleicons.org/nodedotjs/8C8C8C" height="34" alt="Node.js">
-        <img src="https://cdn.simpleicons.org/rust/8C8C8C" height="34" alt="Rust">
-        <img src="https://cdn.simpleicons.org/springboot/8C8C8C" height="34" alt="Spring Boot">
-        <img src="https://cdn.simpleicons.org/redis/8C8C8C" height="34" alt="Redis">
-        <img src="https://cdn.simpleicons.org/supabase/8C8C8C" height="34" alt="Supabase"><br>
+        <img src="https://cdn.simpleicons.org/fastapi/{{muted}}" height="34" alt="FastAPI">
+        <img src="https://cdn.simpleicons.org/django/{{muted}}" height="34" alt="Django">
+        <img src="https://cdn.simpleicons.org/nodedotjs/{{muted}}" height="34" alt="Node.js">
+        <img src="https://cdn.simpleicons.org/rust/{{muted}}" height="34" alt="Rust">
+        <img src="https://cdn.simpleicons.org/springboot/{{muted}}" height="34" alt="Spring Boot">
+        <img src="https://cdn.simpleicons.org/redis/{{muted}}" height="34" alt="Redis">
+        <img src="https://cdn.simpleicons.org/supabase/{{muted}}" height="34" alt="Supabase"><br>
         <sub><code>FastAPI · Django · Node.js · Rust · Spring Boot · Redis · Supabase</code></sub>
       </td>
       <td width="50%" valign="top"><code>├─ ◉ web_y_movil:</code><br><br>
-        <img src="https://cdn.simpleicons.org/react/8C8C8C" height="34" alt="React">
-        <img src="https://cdn.simpleicons.org/nextdotjs/8C8C8C" height="34" alt="Next.js">
-        <img src="https://cdn.simpleicons.org/svelte/8C8C8C" height="34" alt="Svelte">
-        <img src="https://cdn.simpleicons.org/typescript/8C8C8C" height="34" alt="TypeScript">
-        <img src="https://cdn.simpleicons.org/tailwindcss/8C8C8C" height="34" alt="Tailwind">
-        <img src="https://cdn.simpleicons.org/astro/8C8C8C" height="34" alt="Astro">
-        <img src="https://cdn.simpleicons.org/tauri/8C8C8C" height="34" alt="Tauri">
-        <img src="https://cdn.simpleicons.org/kotlin/8C8C8C" height="34" alt="Kotlin"><br>
+        <img src="https://cdn.simpleicons.org/react/{{muted}}" height="34" alt="React">
+        <img src="https://cdn.simpleicons.org/nextdotjs/{{muted}}" height="34" alt="Next.js">
+        <img src="https://cdn.simpleicons.org/svelte/{{muted}}" height="34" alt="Svelte">
+        <img src="https://cdn.simpleicons.org/typescript/{{muted}}" height="34" alt="TypeScript">
+        <img src="https://cdn.simpleicons.org/tailwindcss/{{muted}}" height="34" alt="Tailwind">
+        <img src="https://cdn.simpleicons.org/astro/{{muted}}" height="34" alt="Astro">
+        <img src="https://cdn.simpleicons.org/tauri/{{muted}}" height="34" alt="Tauri">
+        <img src="https://cdn.simpleicons.org/kotlin/{{muted}}" height="34" alt="Kotlin"><br>
         <sub><code>React · Next.js · Svelte · TypeScript · Tailwind · Astro · Tauri · Kotlin</code></sub>
       </td>
     </tr>
     <tr>
       <td colspan="2" valign="top"><code>╰─ ⌁ devops_y_herramientas:</code><br><br>
-        <img src="https://cdn.simpleicons.org/docker/8C8C8C" height="34" alt="Docker">
-        <img src="https://cdn.simpleicons.org/linux/8C8C8C" height="34" alt="Linux">
-        <img src="https://cdn.simpleicons.org/githubactions/8C8C8C" height="34" alt="GitHub Actions">
-        <img src="https://cdn.simpleicons.org/nginx/8C8C8C" height="34" alt="Nginx">
-        <img src="https://cdn.simpleicons.org/cloudflare/8C8C8C" height="34" alt="Cloudflare">
-        <img src="https://cdn.simpleicons.org/vercel/8C8C8C" height="34" alt="Vercel">
-        <img src="https://cdn.simpleicons.org/git/8C8C8C" height="34" alt="Git">
-        <img src="https://cdn.simpleicons.org/gitlab/8C8C8C" height="34" alt="GitLab">
-        <img src="https://cdn.simpleicons.org/n8n/8C8C8C" height="34" alt="n8n">
-        <img src="https://cdn.simpleicons.org/claude/8C8C8C" height="34" alt="Claude Code"><br>
+        <img src="https://cdn.simpleicons.org/docker/{{muted}}" height="34" alt="Docker">
+        <img src="https://cdn.simpleicons.org/linux/{{muted}}" height="34" alt="Linux">
+        <img src="https://cdn.simpleicons.org/githubactions/{{muted}}" height="34" alt="GitHub Actions">
+        <img src="https://cdn.simpleicons.org/nginx/{{muted}}" height="34" alt="Nginx">
+        <img src="https://cdn.simpleicons.org/cloudflare/{{muted}}" height="34" alt="Cloudflare">
+        <img src="https://cdn.simpleicons.org/vercel/{{muted}}" height="34" alt="Vercel">
+        <img src="https://cdn.simpleicons.org/git/{{muted}}" height="34" alt="Git">
+        <img src="https://cdn.simpleicons.org/gitlab/{{muted}}" height="34" alt="GitLab">
+        <img src="https://cdn.simpleicons.org/n8n/{{muted}}" height="34" alt="n8n">
+        <img src="https://cdn.simpleicons.org/claude/{{muted}}" height="34" alt="Claude Code"><br>
         <sub><code>Docker · Linux · GitHub Actions · Nginx · Cloudflare · Vercel · Git · GitLab · n8n · Claude Code · MCP</code></sub>
       </td>
     </tr>
@@ -267,13 +267,13 @@
 
 <div align="center">
 
-<a href="https://diegofernandolojantenesaca.github.io/"><img src="https://img.shields.io/badge/Portafolio-FFFFFF?style=for-the-badge&logo=astro&logoColor=0A0A0A" alt="Portafolio"></a>&nbsp;
-<a href="https://www.linkedin.com/in/diego-fernando-lojan"><img src="https://img.shields.io/badge/LinkedIn-D9D9D9?style=for-the-badge&logo=linkedin&logoColor=0A0A0A" alt="LinkedIn"></a>&nbsp;
-<a href="https://orcid.org/0009-0003-3882-3889"><img src="https://img.shields.io/badge/ORCID-D9D9D9?style=for-the-badge&logo=orcid&logoColor=0A0A0A" alt="ORCID"></a>&nbsp;
-<a href="https://www.kaggle.com/diegofernandoljtn"><img src="https://img.shields.io/badge/Kaggle-FFFFFF?style=for-the-badge&logo=kaggle&logoColor=0A0A0A" alt="Kaggle"></a>&nbsp;
-<a href="https://gitlab.com/fernando.lojan10"><img src="https://img.shields.io/badge/GitLab-D9D9D9?style=for-the-badge&logo=gitlab&logoColor=0A0A0A" alt="GitLab"></a>&nbsp;
-<a href="https://www.indagalab.com"><img src="https://img.shields.io/badge/Indaga_Lab-D9D9D9?style=for-the-badge&logo=vercel&logoColor=0A0A0A" alt="Indaga Lab"></a>&nbsp;
-<a href="mailto:fernando.lojan10@gmail.com"><img src="https://img.shields.io/badge/Correo-FFFFFF?style=for-the-badge&logo=gmail&logoColor=0A0A0A" alt="Correo"></a>
+<a href="https://diegofernandolojantenesaca.github.io/"><img src="https://img.shields.io/badge/Portafolio-{{accent}}?style=for-the-badge&logo=astro&logoColor={{bg}}" alt="Portafolio"></a>&nbsp;
+<a href="https://www.linkedin.com/in/diego-fernando-lojan"><img src="https://img.shields.io/badge/LinkedIn-{{warm}}?style=for-the-badge&logo=linkedin&logoColor={{bg}}" alt="LinkedIn"></a>&nbsp;
+<a href="https://orcid.org/0009-0003-3882-3889"><img src="https://img.shields.io/badge/ORCID-{{warm}}?style=for-the-badge&logo=orcid&logoColor={{bg}}" alt="ORCID"></a>&nbsp;
+<a href="https://www.kaggle.com/diegofernandoljtn"><img src="https://img.shields.io/badge/Kaggle-{{accent}}?style=for-the-badge&logo=kaggle&logoColor={{bg}}" alt="Kaggle"></a>&nbsp;
+<a href="https://gitlab.com/fernando.lojan10"><img src="https://img.shields.io/badge/GitLab-{{warm}}?style=for-the-badge&logo=gitlab&logoColor={{bg}}" alt="GitLab"></a>&nbsp;
+<a href="https://www.indagalab.com"><img src="https://img.shields.io/badge/Indaga_Lab-{{warm}}?style=for-the-badge&logo=vercel&logoColor={{bg}}" alt="Indaga Lab"></a>&nbsp;
+<a href="mailto:fernando.lojan10@gmail.com"><img src="https://img.shields.io/badge/Correo-{{accent}}?style=for-the-badge&logo=gmail&logoColor={{bg}}" alt="Correo"></a>
 
 <br><br>
 

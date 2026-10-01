@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="550" viewBox="0 0 960 550" role="img" aria-label="Trayectoria de Diego como un git log --graph">
+<style>@keyframes in { from { opacity: .25; transform: translateX(-4px) } to { opacity: 1; transform: none } } .r { animation: in .45s ease-out both }@keyframes pulse { 0%,100% { r: 7 } 50% { r: 10 } } .head { animation: pulse 2.4s ease-in-out infinite }</style>
+<rect width="960" height="550" rx="14" fill="#FFFFFF" stroke="#D4D4D4"/>
+<text x="20.0" y="30.0" fill="#111111" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13" font-weight="700">git log --graph --oneline trayectoria</text>
+
+<text x="940.0" y="30.0" fill="#6E6E6E" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="10" text-anchor="end">formación</text>
+<circle cx="876.2" cy="26.5" r="4" fill="#9A9A9A"/>
+<text x="860.2" y="30.0" fill="#6E6E6E" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="10" text-anchor="end">proyectos</text>
+<circle cx="796.4000000000001" cy="26.5" r="4" fill="#6B6B6B"/>
+<text x="780.4" y="30.0" fill="#6E6E6E" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="10" text-anchor="end">main</text>
+<circle cx="747.6000000000001" cy="26.5" r="4" fill="#111111"/>
+<path d="M36 518V70" stroke="#111111" stroke-width="2" fill="none"/>
+<path d="M36 378C36 362.6 60 365.4 60 350V98C60 82.6 36 85.4 36 70" stroke="#6B6B6B" stroke-width="2" fill="none"/>
+<path d="M36 434C36 418.6 84 421.4 84 406V98C84 82.6 36 85.4 36 70" stroke="#9A9A9A" stroke-width="2" fill="none"/>
+<g class="r" style="animation-delay:0.15s">
+<circle class="head" cx="36" cy="70" r="7" fill="none" stroke="#111111" stroke-width="1.5"/>
+<circle cx="36" cy="70" r="4.5" fill="#111111" stroke="#FFFFFF" stroke-width="2"/>
+<text x="112.0" y="74.5" fill="#3A3A3A" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13">54b1bbb</text>
+<text x="182" y="74.5" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13"><tspan fill="#111111" font-weight="700">(HEAD -&gt; main)</tspan><tspan fill="#111111"> Data &amp; AI Engineer · Ecuador</tspan></text>
+<text x="936.0" y="74.5" fill="#6E6E6E" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="12" text-anchor="end">ahora</text>
+</g>
+<g class="r" style="animation-delay:0.21s">
+<circle cx="60" cy="98" r="4.5" fill="#6B6B6B" stroke="#FFFFFF" stroke-width="2"/>
+<text x="112.0" y="102.5" fill="#3A3A3A" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13">583dee5</text>
+<text x="182" y="102.5" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13"><tspan fill="#6B6B6B" font-weight="700">feat:</tspan><tspan fill="#111111"> Ordo: Gmail ordenado con IA</tspan></text>
+<text x="936.0" y="102.5" fill="#6E6E6E" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="12" text-anchor="end">sep 2026</text>
+</g>
+<g class="r" style="animation-delay:0.27s">
+<circle cx="60" cy="126" r="4.5" fill="#6B6B6B" stroke="#FFFFFF" stroke-width="2"/>
+<text x="112.0" y="130.5" fill="#3A3A3A" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13">dc41fb3</text>
+<text x="182" y="130.5" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13"><tspan fill="#3A3A3A" font-weight="700">release:</tspan><tspan fill="#111111"> Xyra 1.2.0 · PC + Android</tspan></text>
+<text x="936.0" y="130.5" fill="#6E6E6E" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="12" text-anchor="end">sep 2026</text>
+</g>
+<g class="r" style="animation-delay:0.33s">
+<circle cx="60" cy="154" r="4.5" fill="#6B6B6B" stroke="#FFFFFF" stroke-width="2"/>
+<text x="112.0" y="158.5" fill="#3A3A3A" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13">dc31d33</text>
+<text x="182" y="158.5" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13"><tspan fill="#6B6B6B" font-weight="700">feat:</tspan><tspan fill="#111111"> Riksi: visión offline en el navegador</tspan></text>
+<text x="936.0" y="158.5" fill="#6E6E6E" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="12" text-anchor="end">ago 2026</text>
+</g>
+<g class="r" style="animation-delay:0.39s">
+<circle cx="84" cy="182" r="4.5" fill="#9A9A9A" stroke="#FFFFFF" stroke-width="2"/>
+<text x="112.0" y="186.5" fill="#3A3A3A" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13">c703a8d</text>
+<text x="182" y="186.5" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13"><tspan fill="#9A9A9A" font-weight="700">learn:</tspan><tspan fill="#111111"> Escuela de Cómputo Cuántico · UNAM</tspan></text>
+<text x="936.0" y="186.5" fill="#6E6E6E" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="12" text-anchor="end">ago 2026</text>
+</g>
+<g class="r" style="animation-delay:0.45s">
+<circle cx="36" cy="210" r="4.5" fill="#111111" stroke="#FFFFFF" stroke-width="2"/>
+<text x="112.0" y="214.5" fill="#3A3A3A" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13">1674d18</text>
+<text x="182" y="214.5" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13"><tspan fill="#111111" font-weight="700">work:</tspan><tspan fill="#111111"> cofundador de Xynitra Devs</tspan></text>
+<text x="936.0" y="214.5" fill="#6E6E6E" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="12" text-anchor="end">jul 2026</text>
+</g>
+<g class="r" style="animation-delay:0.51s">
+<circle cx="60" cy="238" r="4.5" fill="#6B6B6B" stroke="#FFFFFF" stroke-width="2"/>
+<text x="112.0" y="242.5" fill="#3A3A3A" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13">e24aa5c</text>
+<text x="182" y="242.5" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13"><tspan fill="#6B6B6B" font-weight="700">feat:</tspan><tspan fill="#111111"> Cuadrekit para micronegocios del Ecuador</tspan></text>
+<text x="936.0" y="242.5" fill="#6E6E6E" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="12" text-anchor="end">jun 2026</text>
+</g>
+<g class="r" style="animation-delay:0.57s">
+<circle cx="60" cy="266" r="4.5" fill="#6B6B6B" stroke="#FFFFFF" stroke-width="2"/>
+<text x="112.0" y="270.5" fill="#3A3A3A" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13">2485c52</text>
+<text x="182" y="270.5" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13"><tspan fill="#6B6B6B" font-weight="700">feat:</tspan><tspan fill="#111111"> AgentOS: un Android sin Google como agente de IA</tspan></text>
+<text x="936.0" y="270.5" fill="#6E6E6E" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="12" text-anchor="end">may 2026</text>
+</g>
+<g class="r" style="animation-delay:0.63s">
+<circle cx="60" cy="294" r="4.5" fill="#6B6B6B" stroke="#FFFFFF" stroke-width="2"/>
+<text x="112.0" y="298.5" fill="#3A3A3A" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13">7c584b1</text>
+<text x="182" y="298.5" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13"><tspan fill="#6B6B6B" font-weight="700">feat:</tspan><tspan fill="#111111"> Wauto Indaga: CRM y mensajería con IA</tspan></text>
+<text x="936.0" y="298.5" fill="#6E6E6E" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="12" text-anchor="end">may 2026</text>
+</g>
+<g class="r" style="animation-delay:0.69s">
+<circle cx="84" cy="322" r="4.5" fill="#9A9A9A" stroke="#FFFFFF" stroke-width="2"/>
+<text x="112.0" y="326.5" fill="#3A3A3A" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13">ed4f2ac</text>
+<text x="182" y="326.5" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13"><tspan fill="#3A3A3A" font-weight="700">paper:</tspan><tspan fill="#111111"> aceptado en Springer Nature · CIT 2026</tspan></text>
+<text x="936.0" y="326.5" fill="#6E6E6E" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="12" text-anchor="end">2026</text>
+</g>
+<g class="r" style="animation-delay:0.75s">
+<circle cx="60" cy="350" r="4.5" fill="#6B6B6B" stroke="#FFFFFF" stroke-width="2"/>
+<text x="112.0" y="354.5" fill="#3A3A3A" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13">10d97c9</text>
+<text x="182" y="354.5" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13"><tspan fill="#6B6B6B" font-weight="700">feat:</tspan><tspan fill="#111111"> anomalías energéticas en 8 países</tspan></text>
+<text x="936.0" y="354.5" fill="#6E6E6E" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="12" text-anchor="end">abr 2026</text>
+</g>
+<g class="r" style="animation-delay:0.81s">
+<circle cx="36" cy="378" r="4.5" fill="#111111" stroke="#FFFFFF" stroke-width="2"/>
+<text x="112.0" y="382.5" fill="#3A3A3A" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13">89098a8</text>
+<text x="182" y="382.5" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13"><tspan fill="#111111" font-weight="700">work:</tspan><tspan fill="#111111"> Data &amp; AI en Dataglov</tspan></text>
+<text x="936.0" y="382.5" fill="#6E6E6E" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="12" text-anchor="end">feb 2026</text>
+</g>
+<g class="r" style="animation-delay:0.87s">
+<circle cx="84" cy="406" r="4.5" fill="#9A9A9A" stroke="#FFFFFF" stroke-width="2"/>
+<text x="112.0" y="410.5" fill="#3A3A3A" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13">5058d27</text>
+<text x="182" y="410.5" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13"><tspan fill="#9A9A9A" font-weight="700">learn:</tspan><tspan fill="#111111"> Cisco: ciberseguridad y redes · UTP</tspan></text>
+<text x="936.0" y="410.5" fill="#6E6E6E" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="12" text-anchor="end">2025</text>
+</g>
+<g class="r" style="animation-delay:0.93s">
+<circle cx="36" cy="434" r="4.5" fill="#111111" stroke="#FFFFFF" stroke-width="2"/>
+<text x="112.0" y="438.5" fill="#3A3A3A" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13">249db0d</text>
+<text x="182" y="438.5" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13"><tspan fill="#111111" font-weight="700">work:</tspan><tspan fill="#111111"> full stack en Serviestudios</tspan></text>
+<text x="936.0" y="438.5" fill="#6E6E6E" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="12" text-anchor="end">oct 2025</text>
+</g>
+<g class="r" style="animation-delay:0.99s">
+<circle cx="36" cy="462" r="4.5" fill="#111111" stroke="#FFFFFF" stroke-width="2"/>
+<text x="112.0" y="466.5" fill="#3A3A3A" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13">5dd3694</text>
+<text x="182" y="466.5" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13"><tspan fill="#6E6E6E" font-weight="700">init:</tspan><tspan fill="#111111"> Indaga Lab</tspan></text>
+<text x="936.0" y="466.5" fill="#6E6E6E" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="12" text-anchor="end">2025</text>
+</g>
+<g class="r" style="animation-delay:1.05s">
+<circle cx="36" cy="490" r="4.5" fill="#111111" stroke="#FFFFFF" stroke-width="2"/>
+<text x="112.0" y="494.5" fill="#3A3A3A" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13">145ebe9</text>
+<text x="182" y="494.5" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13"><tspan fill="#111111" font-weight="700">work:</tspan><tspan fill="#111111"> freelance: software e IA</tspan></text>
+<text x="936.0" y="494.5" fill="#6E6E6E" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="12" text-anchor="end">2024</text>
+</g>
+<g class="r" style="animation-delay:1.11s">
+<circle cx="36" cy="518" r="4.5" fill="#111111" stroke="#FFFFFF" stroke-width="2"/>
+<text x="112.0" y="522.5" fill="#3A3A3A" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13">c213fb8</text>
+<text x="182" y="522.5" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13"><tspan fill="#6E6E6E" font-weight="700">init:</tspan><tspan fill="#111111"> Ing. Ciencias de la Computación · UNL</tspan></text>
+<text x="936.0" y="522.5" fill="#6E6E6E" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="12" text-anchor="end"></text>
+</g>
+</svg>

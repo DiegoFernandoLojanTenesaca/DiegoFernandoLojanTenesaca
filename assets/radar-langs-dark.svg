@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="460" height="380" viewBox="0 0 460 380" role="img" aria-label="langs.radar">
+<style>@keyframes grow { from { transform: scale(.55) } to { transform: none } } .shape { transform-origin: 230px 200px; animation: grow 1.2s cubic-bezier(.2,.8,.2,1) both }</style>
+<rect width="460" height="380" rx="14" fill="#111111" stroke="#2B2B2B"/>
+<text x="20.0" y="30.0" fill="#FFFFFF" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13" font-weight="700">langs.radar</text>
+<text x="440.0" y="30.0" fill="#8C8C8C" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="10" text-anchor="end">uso real · 0-100</text>
+<polygon points="230.0,170.5 253.1,181.6 258.8,206.6 242.8,226.6 217.2,226.6 201.2,206.6 206.9,181.6" fill="none" stroke="#2B2B2B"/>
+<polygon points="230.0,141.0 276.1,163.2 287.5,213.1 255.6,253.2 204.4,253.2 172.5,213.1 183.9,163.2" fill="none" stroke="#2B2B2B"/>
+<polygon points="230.0,111.5 299.2,144.8 316.3,219.7 268.4,279.7 191.6,279.7 143.7,219.7 160.8,144.8" fill="none" stroke="#2B2B2B"/>
+<polygon points="230.0,82.0 322.3,126.4 345.0,226.3 281.2,306.3 178.8,306.3 115.0,226.3 137.7,126.4" fill="none" stroke="#2B2B2B"/>
+<path d="M230 200L230.0 82.0" stroke="#2B2B2B"/>
+<text x="230.0" y="64.0" fill="#F5F5F5" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="11" text-anchor="middle">Python</text>
+<path d="M230 200L322.3 126.4" stroke="#2B2B2B"/>
+<text x="339.5" y="116.7" fill="#F5F5F5" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="11" text-anchor="start">TypeScript</text>
+<path d="M230 200L345.0 226.3" stroke="#2B2B2B"/>
+<text x="366.5" y="235.2" fill="#F5F5F5" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="11" text-anchor="start">SQL</text>
+<path d="M230 200L281.2 306.3" stroke="#2B2B2B"/>
+<text x="290.7" y="330.1" fill="#F5F5F5" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="11" text-anchor="start">Rust</text>
+<path d="M230 200L178.8 306.3" stroke="#2B2B2B"/>
+<text x="169.3" y="330.1" fill="#F5F5F5" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="11" text-anchor="end">Kotlin</text>
+<path d="M230 200L115.0 226.3" stroke="#2B2B2B"/>
+<text x="93.5" y="235.2" fill="#F5F5F5" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="11" text-anchor="end">Java</text>
+<path d="M230 200L137.7 126.4" stroke="#2B2B2B"/>
+<text x="120.5" y="116.7" fill="#F5F5F5" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="11" text-anchor="end">Bash</text>
+<g class="shape"><polygon points="230.0,91.4 302.0,142.6 322.0,221.0 258.2,258.5 207.0,247.8 178.2,211.8 179.3,159.5" fill="#FFFFFF" fill-opacity=".22" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="230.0" cy="91.4" r="3.5" fill="#D9D9D9"/>
+<circle cx="302.0" cy="142.6" r="3.5" fill="#D9D9D9"/>
+<circle cx="322.0" cy="221.0" r="3.5" fill="#D9D9D9"/>
+<circle cx="258.2" cy="258.5" r="3.5" fill="#D9D9D9"/>
+<circle cx="207.0" cy="247.8" r="3.5" fill="#D9D9D9"/>
+<circle cx="178.2" cy="211.8" r="3.5" fill="#D9D9D9"/>
+<circle cx="179.3" cy="159.5" r="3.5" fill="#D9D9D9"/>
+</g></svg>
