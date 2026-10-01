@@ -638,7 +638,8 @@ def git_log(c, a):
             body = f'<tspan fill="{c["text"]}">{escape(msg)}</tspan>'
         o.append(f'<g class="l" style="animation-delay:{0.2 + i * 0.09:.2f}s">')
         o.append(text(24, y, sha, c["warm"], 13))
-        o.append(text(96, y, f"({repo})", c["accent2"], 13))
+        label = "perfil" if repo == GITHUB_USER else (repo if len(repo) <= 18 else repo[:17] + "…")
+        o.append(text(96, y, f"({label})", c["accent2"], 13))
         o.append(f'<text x="268" y="{y}" font-family="{MONO}" font-size="13">{body}</text>')
         o.append(text(W - 24, y, date[:10], c["muted"], 12, anchor="end"))
         o.append("</g>")
