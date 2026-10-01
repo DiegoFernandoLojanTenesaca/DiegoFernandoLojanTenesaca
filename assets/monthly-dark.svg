@@ -6,7 +6,7 @@
 <path d="M46 154.0H450" stroke="#2B2B2B" stroke-dasharray="3 4"/>
 <text x="40.0" y="158.0" fill="#8C8C8C" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="9" text-anchor="end">90</text>
 <path d="M46 64.0H450" stroke="#2B2B2B" stroke-dasharray="3 4"/>
-<text x="40.0" y="68.0" fill="#8C8C8C" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="9" text-anchor="end">179</text>
+<text x="40.0" y="68.0" fill="#8C8C8C" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="9" text-anchor="end">180</text>
 <path d="M46 244H450" stroke="#2B2B2B"/>
 <g class="bar" style="animation-delay:0.00s">
 </g>
@@ -17,52 +17,52 @@
 <text x="96.5" y="237.0" fill="#F5F5F5" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="9" text-anchor="middle">1</text>
 <text x="96.5" y="260.0" fill="#8C8C8C" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="10" text-anchor="middle">dic</text>
 <g class="bar" style="animation-delay:0.10s">
-<rect x="120.1" y="224.9" width="20.2" height="19.1" rx="2" fill="#A3A3A3"/>
+<rect x="120.1" y="225.0" width="20.2" height="19.0" rx="2" fill="#A3A3A3"/>
 </g>
-<text x="130.2" y="218.9" fill="#F5F5F5" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="9" text-anchor="middle">19</text>
+<text x="130.2" y="219.0" fill="#F5F5F5" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="9" text-anchor="middle">19</text>
 <text x="130.2" y="260.0" fill="#8C8C8C" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="10" text-anchor="middle">ene</text>
 <g class="bar" style="animation-delay:0.15s">
-<rect x="153.7" y="160.5" width="20.2" height="83.5" rx="2" fill="#A3A3A3"/>
+<rect x="153.7" y="161.0" width="20.2" height="83.0" rx="2" fill="#A3A3A3"/>
 </g>
-<text x="163.8" y="154.5" fill="#F5F5F5" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="9" text-anchor="middle">83</text>
+<text x="163.8" y="155.0" fill="#F5F5F5" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="9" text-anchor="middle">83</text>
 <text x="163.8" y="260.0" fill="#8C8C8C" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="10" text-anchor="middle">feb</text>
 <g class="bar" style="animation-delay:0.20s">
-<rect x="187.4" y="120.3" width="20.2" height="123.7" rx="2" fill="#A3A3A3"/>
+<rect x="187.4" y="121.0" width="20.2" height="123.0" rx="2" fill="#A3A3A3"/>
 </g>
-<text x="197.5" y="114.3" fill="#F5F5F5" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="9" text-anchor="middle">123</text>
+<text x="197.5" y="115.0" fill="#F5F5F5" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="9" text-anchor="middle">123</text>
 <text x="197.5" y="260.0" fill="#8C8C8C" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="10" text-anchor="middle">mar</text>
 <g class="bar" style="animation-delay:0.25s">
-<rect x="221.1" y="144.4" width="20.2" height="99.6" rx="2" fill="#A3A3A3"/>
-<rect x="221.1" y="88.1" width="20.2" height="56.3" rx="2" fill="#FFFFFF"/>
+<rect x="221.1" y="145.0" width="20.2" height="99.0" rx="2" fill="#A3A3A3"/>
+<rect x="221.1" y="89.0" width="20.2" height="56.0" rx="2" fill="#FFFFFF"/>
 </g>
-<text x="231.2" y="82.1" fill="#F5F5F5" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="9" text-anchor="middle">155</text>
+<text x="231.2" y="83.0" fill="#F5F5F5" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="9" text-anchor="middle">155</text>
 <text x="231.2" y="260.0" fill="#8C8C8C" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="10" text-anchor="middle">abr</text>
 <g class="bar" style="animation-delay:0.30s">
-<rect x="254.7" y="215.8" width="20.2" height="28.2" rx="2" fill="#A3A3A3"/>
-<rect x="254.7" y="128.4" width="20.2" height="87.5" rx="2" fill="#FFFFFF"/>
+<rect x="254.7" y="216.0" width="20.2" height="28.0" rx="2" fill="#A3A3A3"/>
+<rect x="254.7" y="129.0" width="20.2" height="87.0" rx="2" fill="#FFFFFF"/>
 </g>
-<text x="264.8" y="122.4" fill="#F5F5F5" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="9" text-anchor="middle">115</text>
+<text x="264.8" y="123.0" fill="#F5F5F5" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="9" text-anchor="middle">115</text>
 <text x="264.8" y="260.0" fill="#8C8C8C" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="10" text-anchor="middle">may</text>
 <g class="bar" style="animation-delay:0.35s">
 <rect x="288.4" y="238.0" width="20.2" height="6.0" rx="2" fill="#A3A3A3"/>
-<rect x="288.4" y="136.4" width="20.2" height="101.6" rx="2" fill="#FFFFFF"/>
+<rect x="288.4" y="137.0" width="20.2" height="101.0" rx="2" fill="#FFFFFF"/>
 </g>
-<text x="298.5" y="130.4" fill="#F5F5F5" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="9" text-anchor="middle">107</text>
+<text x="298.5" y="131.0" fill="#F5F5F5" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="9" text-anchor="middle">107</text>
 <text x="298.5" y="260.0" fill="#8C8C8C" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="10" text-anchor="middle">jun</text>
 <g class="bar" style="animation-delay:0.40s">
-<rect x="322.1" y="203.8" width="20.2" height="40.2" rx="2" fill="#FFFFFF"/>
+<rect x="322.1" y="204.0" width="20.2" height="40.0" rx="2" fill="#FFFFFF"/>
 </g>
-<text x="332.2" y="197.8" fill="#F5F5F5" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="9" text-anchor="middle">40</text>
+<text x="332.2" y="198.0" fill="#F5F5F5" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="9" text-anchor="middle">40</text>
 <text x="332.2" y="260.0" fill="#8C8C8C" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="10" text-anchor="middle">jul</text>
 <g class="bar" style="animation-delay:0.45s">
-<rect x="355.7" y="187.7" width="20.2" height="56.3" rx="2" fill="#FFFFFF"/>
+<rect x="355.7" y="188.0" width="20.2" height="56.0" rx="2" fill="#FFFFFF"/>
 </g>
-<text x="365.8" y="181.7" fill="#F5F5F5" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="9" text-anchor="middle">56</text>
+<text x="365.8" y="182.0" fill="#F5F5F5" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="9" text-anchor="middle">56</text>
 <text x="365.8" y="260.0" fill="#8C8C8C" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="10" text-anchor="middle">ago</text>
 <g class="bar" style="animation-delay:0.50s">
 <rect x="389.4" y="64.0" width="20.2" height="180.0" rx="2" fill="#FFFFFF"/>
 </g>
-<text x="399.5" y="58.0" fill="#F5F5F5" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="9" text-anchor="middle">179</text>
+<text x="399.5" y="58.0" fill="#F5F5F5" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="9" text-anchor="middle">180</text>
 <text x="399.5" y="260.0" fill="#8C8C8C" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="10" text-anchor="middle">sep</text>
 <g class="bar" style="animation-delay:0.55s">
 </g>

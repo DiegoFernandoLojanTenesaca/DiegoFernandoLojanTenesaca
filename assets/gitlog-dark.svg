@@ -4,52 +4,52 @@
 <text x="20.0" y="30.0" fill="#FFFFFF" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13" font-weight="700">git log --all --oneline --author=diego -8</text>
 <text x="940.0" y="30.0" fill="#8C8C8C" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="10" text-anchor="end">últimos commits públicos</text>
 <g class="l" style="animation-delay:0.20s">
-<text x="24.0" y="66.0" fill="#D9D9D9" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13">61324aa</text>
-<text x="96.0" y="66.0" fill="#A3A3A3" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13">(perfil)</text>
-<text x="268" y="66" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13"><tspan fill="#737373" font-weight="700">fix:</tspan><tspan fill="#F5F5F5"> nombre corto del repo en el panel de git log</tspan></text>
+<text x="24.0" y="66.0" fill="#D9D9D9" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13">0a07d3c</text>
+<text x="96.0" y="66.0" fill="#A3A3A3" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13">(DiegoFernandoLoja…)</text>
+<text x="268" y="66" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13"><tspan fill="#F5F5F5">Agrega Inti, Xynitra, Xyra, Ordo y los certificados de la UNAM y Ci…</tspan></text>
 <text x="936.0" y="66.0" fill="#8C8C8C" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="12" text-anchor="end">2026-10-01</text>
 </g>
 <g class="l" style="animation-delay:0.29s">
-<text x="24.0" y="90.0" fill="#D9D9D9" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13">48c7bb7</text>
+<text x="24.0" y="90.0" fill="#D9D9D9" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13">61324aa</text>
 <text x="96.0" y="90.0" fill="#A3A3A3" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13">(perfil)</text>
-<text x="268" y="90" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13"><tspan fill="#FFFFFF" font-weight="700">feat:</tspan><tspan fill="#F5F5F5"> perfil nuevo en blanco y negro</tspan></text>
+<text x="268" y="90" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13"><tspan fill="#737373" font-weight="700">fix:</tspan><tspan fill="#F5F5F5"> nombre corto del repo en el panel de git log</tspan></text>
 <text x="936.0" y="90.0" fill="#8C8C8C" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="12" text-anchor="end">2026-10-01</text>
 </g>
 <g class="l" style="animation-delay:0.38s">
-<text x="24.0" y="114.0" fill="#D9D9D9" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13">7e15af7</text>
-<text x="96.0" y="114.0" fill="#A3A3A3" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13">(xyra)</text>
-<text x="268" y="114" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13"><tspan fill="#A3A3A3" font-weight="700">docs:</tspan><tspan fill="#F5F5F5"> how xyra uses the league client, for riot&#x27;s product review</tspan></text>
-<text x="936.0" y="114.0" fill="#8C8C8C" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="12" text-anchor="end">2026-09-29</text>
+<text x="24.0" y="114.0" fill="#D9D9D9" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13">48c7bb7</text>
+<text x="96.0" y="114.0" fill="#A3A3A3" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13">(perfil)</text>
+<text x="268" y="114" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13"><tspan fill="#FFFFFF" font-weight="700">feat:</tspan><tspan fill="#F5F5F5"> perfil nuevo en blanco y negro</tspan></text>
+<text x="936.0" y="114.0" fill="#8C8C8C" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="12" text-anchor="end">2026-10-01</text>
 </g>
 <g class="l" style="animation-delay:0.47s">
-<text x="24.0" y="138.0" fill="#D9D9D9" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13">c19ce89</text>
+<text x="24.0" y="138.0" fill="#D9D9D9" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13">7e15af7</text>
 <text x="96.0" y="138.0" fill="#A3A3A3" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13">(xyra)</text>
-<text x="268" y="138" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13"><tspan fill="#8C8C8C" font-weight="700">chore:</tspan><tspan fill="#F5F5F5"> riot developer portal site verification</tspan></text>
+<text x="268" y="138" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13"><tspan fill="#A3A3A3" font-weight="700">docs:</tspan><tspan fill="#F5F5F5"> how xyra uses the league client, for riot&#x27;s product review</tspan></text>
 <text x="936.0" y="138.0" fill="#8C8C8C" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="12" text-anchor="end">2026-09-29</text>
 </g>
 <g class="l" style="animation-delay:0.56s">
-<text x="24.0" y="162.0" fill="#D9D9D9" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13">ab343d4</text>
+<text x="24.0" y="162.0" fill="#D9D9D9" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13">c19ce89</text>
 <text x="96.0" y="162.0" fill="#A3A3A3" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13">(xyra)</text>
-<text x="268" y="162" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13"><tspan fill="#A3A3A3" font-weight="700">docs:</tspan><tspan fill="#F5F5F5"> terms of use, privacy policy, riot&#x27;s legal notice and the 1.2…</tspan></text>
+<text x="268" y="162" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13"><tspan fill="#8C8C8C" font-weight="700">chore:</tspan><tspan fill="#F5F5F5"> riot developer portal site verification</tspan></text>
 <text x="936.0" y="162.0" fill="#8C8C8C" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="12" text-anchor="end">2026-09-29</text>
 </g>
 <g class="l" style="animation-delay:0.65s">
-<text x="24.0" y="186.0" fill="#D9D9D9" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13">88eb7c7</text>
+<text x="24.0" y="186.0" fill="#D9D9D9" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13">ab343d4</text>
 <text x="96.0" y="186.0" fill="#A3A3A3" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13">(xyra)</text>
-<text x="268" y="186" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13"><tspan fill="#8C8C8C" font-weight="700">chore:</tspan><tspan fill="#F5F5F5"> release 1.2.0</tspan></text>
+<text x="268" y="186" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13"><tspan fill="#A3A3A3" font-weight="700">docs:</tspan><tspan fill="#F5F5F5"> terms of use, privacy policy, riot&#x27;s legal notice and the 1.2…</tspan></text>
 <text x="936.0" y="186.0" fill="#8C8C8C" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="12" text-anchor="end">2026-09-29</text>
 </g>
 <g class="l" style="animation-delay:0.74s">
-<text x="24.0" y="210.0" fill="#D9D9D9" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13">d7c6a8c</text>
+<text x="24.0" y="210.0" fill="#D9D9D9" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13">88eb7c7</text>
 <text x="96.0" y="210.0" fill="#A3A3A3" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13">(xyra)</text>
-<text x="268" y="210" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13"><tspan fill="#FFFFFF" font-weight="700">feat:</tspan><tspan fill="#F5F5F5"> augment labels and stats that follow riot&#x27;s third-party polic…</tspan></text>
+<text x="268" y="210" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13"><tspan fill="#8C8C8C" font-weight="700">chore:</tspan><tspan fill="#F5F5F5"> release 1.2.0</tspan></text>
 <text x="936.0" y="210.0" fill="#8C8C8C" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="12" text-anchor="end">2026-09-29</text>
 </g>
 <g class="l" style="animation-delay:0.83s">
-<text x="24.0" y="234.0" fill="#D9D9D9" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13">fec6f73</text>
-<text x="96.0" y="234.0" fill="#A3A3A3" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13">(ordo-mail)</text>
-<text x="268" y="234" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13"><tspan fill="#FFFFFF" font-weight="700">feat:</tspan><tspan fill="#F5F5F5"> ai providers, subscriptions and auto updates</tspan></text>
-<text x="936.0" y="234.0" fill="#8C8C8C" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="12" text-anchor="end">2026-09-27</text>
+<text x="24.0" y="234.0" fill="#D9D9D9" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13">d7c6a8c</text>
+<text x="96.0" y="234.0" fill="#A3A3A3" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13">(xyra)</text>
+<text x="268" y="234" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13"><tspan fill="#FFFFFF" font-weight="700">feat:</tspan><tspan fill="#F5F5F5"> augment labels and stats that follow riot&#x27;s third-party polic…</tspan></text>
+<text x="936.0" y="234.0" fill="#8C8C8C" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="12" text-anchor="end">2026-09-29</text>
 </g>
 <text x="24.0" y="258.0" fill="#FFFFFF" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13" font-weight="700">❯</text>
 <rect class="cursor" x="40" y="246" width="8" height="15" fill="#FFFFFF"/>
