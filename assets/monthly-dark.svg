@@ -50,9 +50,9 @@
 <text x="298.5" y="131.0" fill="#F5F5F5" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="9" text-anchor="middle">107</text>
 <text x="298.5" y="260.0" fill="#8C8C8C" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="10" text-anchor="middle">jun</text>
 <g class="bar" style="animation-delay:0.40s">
-<rect x="322.1" y="204.0" width="20.2" height="40.0" rx="2" fill="#FFFFFF"/>
+<rect x="322.1" y="192.0" width="20.2" height="52.0" rx="2" fill="#FFFFFF"/>
 </g>
-<text x="332.2" y="198.0" fill="#F5F5F5" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="9" text-anchor="middle">40</text>
+<text x="332.2" y="186.0" fill="#F5F5F5" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="9" text-anchor="middle">52</text>
 <text x="332.2" y="260.0" fill="#8C8C8C" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="10" text-anchor="middle">jul</text>
 <g class="bar" style="animation-delay:0.45s">
 <rect x="355.7" y="188.0" width="20.2" height="56.0" rx="2" fill="#FFFFFF"/>
@@ -65,6 +65,8 @@
 <text x="399.5" y="58.0" fill="#F5F5F5" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="9" text-anchor="middle">180</text>
 <text x="399.5" y="260.0" fill="#8C8C8C" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="10" text-anchor="middle">sep</text>
 <g class="bar" style="animation-delay:0.55s">
+<rect x="423.1" y="237.0" width="20.2" height="7.0" rx="2" fill="#FFFFFF"/>
 </g>
+<text x="433.2" y="231.0" fill="#F5F5F5" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="9" text-anchor="middle">7</text>
 <text x="433.2" y="260.0" fill="#8C8C8C" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="10" text-anchor="middle">oct</text>
 </svg>
