@@ -9,7 +9,7 @@
 <text x="52.0" y="172.0" fill="#6E6E6E" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="10" text-anchor="end">vie</text>
 <text x="62.0" y="72.0" fill="#6E6E6E" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="10">oct</text>
 <g class="col" style="animation-delay:0.000s">
-<rect x="62" y="82" width="13" height="13" rx="3" fill="#6B6B6B" fill-opacity="1"><title>2025-10-19: 0 GitHub, 15 GitLab</title></rect>
+<rect x="62" y="82" width="13" height="13" rx="3" fill="#D4D4D4"/>
 <rect x="62" y="98" width="13" height="13" rx="3" fill="#6B6B6B" fill-opacity="0.78"><title>2025-10-20: 0 GitHub, 9 GitLab</title></rect>
 <rect x="62" y="114" width="13" height="13" rx="3" fill="#D4D4D4"/>
 <rect x="62" y="130" width="13" height="13" rx="3" fill="#D4D4D4"/>
@@ -489,7 +489,8 @@
 </g>
 <g class="col" style="animation-delay:1.300s">
 <rect x="894" y="82" width="13" height="13" rx="3" fill="#D4D4D4"/>
-<rect x="894" y="98" width="13" height="13" rx="3" fill="#D4D4D4"/>
+<rect x="894" y="98" width="13" height="13" rx="3" fill="#6B6B6B" fill-opacity="1"><title>2026-10-19: 0 GitHub, 15 GitLab</title></rect>
+<rect x="894" y="114" width="13" height="13" rx="3" fill="#D4D4D4"/>
 </g>
 <rect class="scan" x="2" y="78" width="60" height="116" fill="url(#scan)"/>
 <rect x="62" y="210" width="11" height="11" rx="2" fill="#111111"/>
