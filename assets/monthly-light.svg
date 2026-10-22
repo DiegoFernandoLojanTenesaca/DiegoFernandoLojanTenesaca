@@ -65,9 +65,9 @@
 <text x="399.5" y="58.0" fill="#111111" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="9" text-anchor="middle">180</text>
 <text x="399.5" y="260.0" fill="#6E6E6E" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="10" text-anchor="middle">sep</text>
 <g class="bar" style="animation-delay:0.55s">
-<rect x="423.1" y="212.0" width="20.2" height="32.0" rx="2" fill="#6B6B6B"/>
-<rect x="423.1" y="199.0" width="20.2" height="13.0" rx="2" fill="#111111"/>
+<rect x="423.1" y="210.0" width="20.2" height="34.0" rx="2" fill="#6B6B6B"/>
+<rect x="423.1" y="189.0" width="20.2" height="21.0" rx="2" fill="#111111"/>
 </g>
-<text x="433.2" y="193.0" fill="#111111" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="9" text-anchor="middle">45</text>
+<text x="433.2" y="183.0" fill="#111111" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="9" text-anchor="middle">55</text>
 <text x="433.2" y="260.0" fill="#6E6E6E" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="10" text-anchor="middle">oct</text>
 </svg>
