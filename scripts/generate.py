@@ -659,8 +659,8 @@ def git_log(c, a):
 
 CAREER = [  # (carril, fecha, tipo, mensaje), de lo más nuevo a lo más viejo. 0 trabajo, 1 proyectos, 2 formación
     (0, "ahora", "HEAD", "Data & AI Engineer · Ecuador"),
+    (1, "oct 2026", "release", "Xyra 1.3.0 · PC + Android"),
     (1, "sep 2026", "feat", "Ordo: Gmail ordenado con IA"),
-    (1, "sep 2026", "release", "Xyra 1.2.0 · PC + Android"),
     (1, "ago 2026", "feat", "Riksi: visión offline en el navegador"),
     (2, "ago 2026", "learn", "Escuela de Cómputo Cuántico · UNAM"),
     (0, "jul 2026", "work", "cofundador de Xynitra Devs"),
@@ -849,7 +849,10 @@ def line(i, *parts):
 
 
 def agent_card(c, ag):
-    answer = wrap(ag["answer"], 108)[:6] if ag else []
+    answer = wrap(ag["answer"], 108) if ag else []
+    if len(answer) > 6:
+        answer = answer[:6]
+        answer[-1] = answer[-1][:104].rstrip(" ,.;") + "…"
     W, H = 960, 196 + len(answer) * 22
     o = svg_open(W, H, "Última pregunta respondida por el agente del perfil")
     o += frame(c, W, H, "diego-agent · RAG sobre mi CV", "Groq · BM25 · GitHub Actions")
@@ -874,7 +877,7 @@ def agent_card(c, ag):
         o += line(3 + i, text(24, 162 + i * 22, "↳" if i == 0 else " ", c["accent"], 13),
                   text(46, 162 + i * 22, ln, c["text"], 13))
     yb = 162 + len(answer) * 22 + 8
-    o += line(4 + len(answer), text(24, yb, f'{ag["total"]} preguntas respondidas · la tuya va en un Issue',
+    o += line(4 + len(answer), text(24, yb, f'{ag["total"]} pregunta{"s" if ag["total"] != 1 else ""} respondida{"s" if ag["total"] != 1 else ""} · la tuya va en un Issue',
                                     c["muted"], 12),
               f'<rect class="cursor" x="{24 + 52 * 7.2:.0f}" y="{yb - 11}" width="8" height="14" fill="{c["accent"]}"/>')
     o.append("</svg>")
