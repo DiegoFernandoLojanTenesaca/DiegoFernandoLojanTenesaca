@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="58" viewBox="0 0 420 58" role="img" aria-label="Hazle una pregunta al agente">
+<style>@keyframes in { from { opacity: .25; transform: translateX(-4px) } to { opacity: 1; transform: none } } .l { animation: in .45s ease-out both }@keyframes blink { 0%,49% { opacity: 1 } 50%,100% { opacity: 0 } } .cursor { animation: blink 1.1s steps(1) infinite }</style>
+<rect x="1" y="1" width="418" height="56" rx="10" fill="#FFFFFF" stroke="#111111" stroke-width="1.5"/>
+<text x="24.0" y="36.0" fill="#111111" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="18" font-weight="700">❯ preguntarle al agente</text>
+<rect class="cursor" x="272" y="21" width="10" height="19" fill="#111111"/>
+<text x="398.0" y="36.0" fill="#6E6E6E" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="12" text-anchor="end">abre un Issue</text>
+</svg>

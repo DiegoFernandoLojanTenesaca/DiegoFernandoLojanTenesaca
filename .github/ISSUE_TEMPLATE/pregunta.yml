@@ -1,0 +1,16 @@
+name: Pregúntale a mi agente
+description: Una pregunta sobre mi experiencia, proyectos o stack. La responde un agente con RAG sobre mi CV.
+title: "Pregunta: "
+labels: ["pregunta"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Escribe tu pregunta y abre el Issue. En un minuto la responde una GitHub Action: busca en mi CV lo relevante (BM25) y un LLM en Groq redacta la respuesta. Solo usa información pública.
+  - type: textarea
+    id: pregunta
+    attributes:
+      label: Tu pregunta
+      placeholder: ¿En qué proyectos usaste RAG en producción?
+    validations:
+      required: true

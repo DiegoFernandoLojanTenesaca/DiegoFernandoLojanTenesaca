@@ -1,0 +1,32 @@
+name: agente
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  issues: write
+  contents: read
+  actions: write
+
+concurrency:
+  group: agente
+  cancel-in-progress: false
+
+jobs:
+  responder:
+    if: contains(github.event.issue.labels.*.name, 'pregunta') || startsWith(github.event.issue.title, 'Pregunta')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - run: python scripts/agente.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+      - name: actualizar la tarjeta del README
+        run: gh workflow run actividad.yml -R ${{ github.repository }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

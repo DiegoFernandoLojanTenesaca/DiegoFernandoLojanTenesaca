@@ -16,9 +16,12 @@ import datetime as dt
 import json
 import math
 import os
+import re
 import subprocess
 import sys
+import urllib.error
 import urllib.request
+from collections import Counter
 from html import escape
 from pathlib import Path
 
@@ -52,9 +55,9 @@ PALETTES = {
     },
     "mono": {
         "dark": dict(bg="#0A0A0A", panel="#111111", panel2="#161616", line="#2B2B2B", muted="#8C8C8C",
-                     text="#F5F5F5", accent="#FFFFFF", accent2="#A3A3A3", warm="#D9D9D9", hot="#737373"),
+                     text="#F5F5F5", accent="#FFFFFF", accent2="#A3A3A3", warm="#D9D9D9", hot="#737373", dots="#F5B83D"),
         "light": dict(bg="#F6F6F6", panel="#FFFFFF", panel2="#EFEFEF", line="#D4D4D4", muted="#6E6E6E",
-                      text="#111111", accent="#111111", accent2="#6B6B6B", warm="#3A3A3A", hot="#9A9A9A"),
+                      text="#111111", accent="#111111", accent2="#6B6B6B", warm="#3A3A3A", hot="#9A9A9A", dots="#9A5B00"),
     },
     "rojo": {
         "dark": dict(bg="#0C0708", panel="#140B0D", panel2="#1A0F12", line="#3A1D23", muted="#A38C90",
@@ -196,6 +199,7 @@ def banner(c, mode):
     W, H = 1180, 610
     rng = np.random.default_rng(SEED)
     cluster_colors = [c["accent"], c["accent2"], c["warm"], c["hot"]]
+    dots = c.get("dots", c["accent"])  # color del retrato; por defecto, el de la paleta
 
     vis = (48, 124, 392, 414)
     cell, grid = 1.5, (204, 272)
@@ -223,7 +227,7 @@ def banner(c, mode):
 .cursor {{ animation: blink 1.1s steps(1) infinite }}
 .ln {{ animation: line .45s ease-out both }}
 """ + "".join(
-        f"@keyframes k{k} {{ 0%,30% {{ fill: {c['accent']} }} 40%,68% {{ fill: {col_} }} 78%,100% {{ fill: {c['accent']} }} }}\n"
+        f"@keyframes k{k} {{ 0%,30% {{ fill: {dots} }} 40%,68% {{ fill: {col_} }} 78%,100% {{ fill: {dots} }} }}\n"
         f".k{k} {{ animation: k{k} 16s infinite }}\n" for k, col_ in enumerate(cluster_colors))
 
     o = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" '
@@ -250,7 +254,7 @@ def banner(c, mode):
     o.append(text(48, 553, f"pts {len(pts)} · proj: t-SNE(diego)", c["muted"], 10))
 
     d = "".join(f"M{x:.1f} {y:.1f}h1.1" for x, y in pts)
-    o.append(f'<path class="static" d="{d}" stroke="{c["accent"]}" stroke-width="1.1" opacity=".9"/>')
+    o.append(f'<path class="static" d="{d}" stroke="{dots}" stroke-width="1.1" opacity=".9"/>')
 
     o.append('<g class="m">')
     for k in range(len(CLUSTERS)):
@@ -468,6 +472,7 @@ def fetch_activity():
         repos=col["totalRepositoriesWithContributedCommits"],
         commits=commits[:8],
         today=dt.date.today().isoformat(),
+        uid=user["id"],
     )
 
 
@@ -727,6 +732,500 @@ def timeline(c):
     return "\n".join(o)
 
 
+# ---------- secciones nuevas: datos ----------
+
+SERVICES = [  # (servicio, web que se comprueba, repo con releases)
+    ("xyra", "https://xyra-app.pages.dev/", "xyra"),
+    ("ordo", None, "ordo-mail"),
+    ("wauto", "https://wauto.indagalab.com/", None),
+    ("riksi", "https://diegofernandolojantenesaca.github.io/riski/", None),
+    ("cuadrekit", "https://cuadrekit.indagalab.com/", None),
+    ("portafolio", "https://diegofernandolojantenesaca.github.io/", None),
+]
+ASK_URL = f"https://github.com/{GITHUB_USER}/{GITHUB_USER}/issues/new?template=pregunta.yml"
+HIDDEN_REPOS = {GITHUB_USER, "inti-taster"}  # el perfil y la prueba técnica de Inti no van en el mapa ni en las listas
+STOP_WORDS = set("""a al algo ante antes como con contra cual cuando de del desde donde dos el ella ellos en entre
+era es esa ese eso esta estas este esto estos fue ha hace hay la las le les lo los mas me mi mis muy ni no nos o
+otra otro para pero poco por porque que quien se sea ser si sin sobre solo son su sus tambien te tiene todo tu
+un una uno unos y ya the and of to in is are was for on with by an be this that it as from at or your you can
+will not use using via all its into more also has have how run runs readme md http https www com github png svg
+img src alt width height br div align center license mit install npm pip python cada proyecto proyectos
+sistema usando usar uso hecho hecha hacer puede pueden permite traves través mediante incluye version versión
+archivo archivos clone cd dev build node yarn localhost run start app aplicacion aplicación desarrollo desarrollado
+main src public file files example ejemplo new nuevo nueva final simple basic básico básica""".split())
+
+
+def http_check(url):
+    t0 = dt.datetime.now()
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": GITHUB_USER})
+        with urllib.request.urlopen(req, timeout=20) as r:
+            code = r.status
+    except urllib.error.HTTPError as e:
+        code = e.code
+    except OSError:
+        code = 0
+    return code, round((dt.datetime.now() - t0).total_seconds() * 1000)
+
+
+def fetch_extras(token, uid):
+    since = (dt.datetime.now(dt.timezone.utc) - dt.timedelta(days=21)).isoformat()
+    data = gql(token, """query($u: String!, $id: ID!, $since: GitTimestamp!) { user(login: $u) {
+        repositories(ownerAffiliations: OWNER, isFork: false, privacy: PUBLIC, first: 100,
+                     orderBy: {field: PUSHED_AT, direction: DESC}) { nodes {
+          name description stargazerCount pushedAt primaryLanguage { name }
+          repositoryTopics(first: 10) { nodes { topic { name } } }
+          object(expression: "HEAD:README.md") { ... on Blob { text } }
+          defaultBranchRef { target { ... on Commit { history(first: 1, since: $since, author: {id: $id}) {
+            totalCount nodes { messageHeadline committedDate } } } } } } } } }""",
+               u=GITHUB_USER, id=uid, since=since)
+    repos = []
+    for r in data["user"]["repositories"]["nodes"]:
+        hist = ((r.get("defaultBranchRef") or {}).get("target") or {}).get("history") or {"totalCount": 0, "nodes": []}
+        repos.append(dict(
+            name=r["name"], description=r["description"] or "", stars=r["stargazerCount"], pushed=r["pushedAt"],
+            language=(r["primaryLanguage"] or {}).get("name"),
+            topics=[t["topic"]["name"] for t in r["repositoryTopics"]["nodes"]],
+            readme=((r.get("object") or {}).get("text") or "")[:3000],
+            recent=hist["totalCount"], last=(hist["nodes"] or [{}])[0]))
+
+    services = []
+    for name, url, repo in SERVICES:
+        code, ms = http_check(url) if url else (None, None)
+        tag = age = None
+        if repo:
+            try:
+                rel = fetch_json(f"https://api.github.com/repos/{GITHUB_USER}/{repo}/releases/latest", token=token)
+                tag = rel["tag_name"]
+                age = (dt.date.today() - dt.date.fromisoformat(rel["published_at"][:10])).days
+            except OSError:
+                pass
+        services.append(dict(name=name, url=url, code=code, ms=ms, tag=tag, age=age))
+
+    agent = None
+    try:
+        api = f"https://api.github.com/repos/{GITHUB_USER}/{GITHUB_USER}"
+        answered = fetch_json(f"{api}/issues?labels=respondida&state=all&per_page=100", token=token)
+        if answered:
+            issue = answered[0]
+            for com in reversed(fetch_json(issue["comments_url"], token=token)):
+                m = re.search(r"<!-- agente: (\{.*?\}) -->", com["body"], re.S)
+                if m:
+                    meta = json.loads(m.group(1))
+                    text = com["body"].split("<sub>")[0].replace("**", "").strip()
+                    title = re.sub(r"^\s*pregunta\s*:\s*", "", issue["title"], flags=re.I)
+                    agent = dict(meta, question=title, answer=text, number=issue["number"],
+                                 date=issue["created_at"][:10], total=len(answered))
+                    break
+    except OSError:
+        pass
+    return dict(repos=repos, services=services, agent=agent)
+
+
+# ---------- secciones nuevas: SVG ----------
+
+def wrap(s, width):
+    lines, line = [], ""
+    for word in s.split():
+        if len(line) + len(word) + 1 > width:
+            lines.append(line)
+            line = word
+        else:
+            line = f"{line} {word}".strip()
+    return lines + ([line] if line else [])
+
+
+def svg_open(W, H, label, css=""):
+    return [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" '
+            f'aria-label="{escape(label)}">',
+            "<style>@keyframes in { from { opacity: .25; transform: translateX(-4px) } to { opacity: 1; transform: none } }"
+            " .l { animation: in .45s ease-out both }"
+            "@keyframes blink { 0%,49% { opacity: 1 } 50%,100% { opacity: 0 } } .cursor { animation: blink 1.1s steps(1) infinite }"
+            + css + "</style>"]
+
+
+def line(i, *parts):
+    return [f'<g class="l" style="animation-delay:{0.2 + i * 0.12:.2f}s">', *parts, "</g>"]
+
+
+def agent_card(c, ag):
+    answer = wrap(ag["answer"], 108)[:6] if ag else []
+    W, H = 960, 196 + len(answer) * 22
+    o = svg_open(W, H, "Última pregunta respondida por el agente del perfil")
+    o += frame(c, W, H, "diego-agent · RAG sobre mi CV", "Groq · BM25 · GitHub Actions")
+    if not ag:
+        o += line(0, text(24, 72, "❯ esperando la primera pregunta", c["accent"], 14, 700))
+        o.append("</svg>")
+        return "\n".join(o)
+    q = ag["question"] if len(ag["question"]) <= 80 else ag["question"][:79] + "…"
+    o += line(0, text(24, 72, f'❯ ask "{q}"', c["accent"], 14, 700),
+              text(W - 24, 72, f'#{ag["number"]} · {ag["date"]}', c["muted"], 12, anchor="end"))
+    x = 132
+    chips = []
+    for f in ag["fuentes"]:
+        w = len(f) * 6.6 + 16
+        chips.append(f'<rect x="{x:.1f}" y="88" width="{w:.1f}" height="19" rx="4" fill="none" stroke="{c["line"]}"/>')
+        chips.append(text(x + 8, 101.5, f, c["accent2"], 11))
+        x += w + 8
+    o += line(1, text(24, 102, "⠿ retrieve", c["warm"], 13, 700), *chips)
+    o += line(2, text(24, 130, "⠿ generate", c["warm"], 13, 700),
+              text(132, 130, f'{ag["modelo"]} · {ag["ms"] / 1000:.1f} s', c["text"], 13))
+    for i, ln in enumerate(answer):
+        o += line(3 + i, text(24, 162 + i * 22, "↳" if i == 0 else " ", c["accent"], 13),
+                  text(46, 162 + i * 22, ln, c["text"], 13))
+    yb = 162 + len(answer) * 22 + 8
+    o += line(4 + len(answer), text(24, yb, f'{ag["total"]} preguntas respondidas · la tuya va en un Issue',
+                                    c["muted"], 12),
+              f'<rect class="cursor" x="{24 + 52 * 7.2:.0f}" y="{yb - 11}" width="8" height="14" fill="{c["accent"]}"/>')
+    o.append("</svg>")
+    return "\n".join(o)
+
+
+def ask_button(c):
+    W, H = 420, 58
+    o = svg_open(W, H, "Hazle una pregunta al agente")
+    o.append(f'<rect x="1" y="1" width="{W - 2}" height="{H - 2}" rx="10" fill="{c["panel"]}" stroke="{c["accent"]}" stroke-width="1.5"/>')
+    o.append(text(24, 36, "❯ preguntarle al agente", c["accent"], 18, 700))
+    o.append(f'<rect class="cursor" x="{24 + 23 * 10.8:.0f}" y="21" width="10" height="19" fill="{c["accent"]}"/>')
+    o.append(text(W - 22, 36, "abre un Issue", c["muted"], 12, anchor="end"))
+    o.append("</svg>")
+    return "\n".join(o)
+
+
+def pipeline(c):
+    W, H = 960, 372
+    bw, bh = 165, 56
+    xs = [30, 235, 440, 645]
+    y1, y2 = 84, 214
+    css = (" @keyframes dash { to { stroke-dashoffset: -20 } } .loop { animation: dash 1.2s linear infinite }"
+           " @keyframes glow { 0%,100% { opacity: .5 } 50% { opacity: 1 } } .node { animation: glow 3s ease-in-out infinite }")
+    o = svg_open(W, H, "Cómo construyo un sistema RAG: ingesta, recuperación, LLM con failover, guardas y evaluación", css)
+    o += frame(c, W, H, "cat rag.pipeline", "ingesta → consulta → evaluación")
+    o.append(f'<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" '
+             f'orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="{c["muted"]}"/></marker></defs>')
+
+    def box(x, y, title, sub, i):
+        return line(i, f'<rect class="node" style="animation-delay:{i * 0.4:.1f}s" x="{x}" y="{y}" width="{bw}" '
+                       f'height="{bh}" rx="7" fill="{c["panel2"]}" stroke="{c["accent"] if i in (3, 4) else c["line"]}"/>',
+                    text(x + 12, y + 23, title, c["text"], 13, 700), text(x + 12, y + 42, sub, c["muted"], 11))
+
+    row1 = [("fuentes", "chats · PDFs · audio"), ("ETL", "limpieza · chunking"),
+            ("embeddings", "BGE-M3 · 1.024 d"), ("pgvector", "índice HNSW")]
+    row2 = [("respuesta", "API · WhatsApp · app"), ("guardas", "PII · formato · bucles"),
+            ("LLM", "cascada + failover"), ("recuperación", "híbrida · BM25 + vec")]
+    for i, (t, s) in enumerate(row1):
+        o += box(xs[i], y1, t, s, i)
+    for i, (t, s) in enumerate(row2):
+        o += box(xs[i], y2, t, s, 4 + (3 - i))
+    for i in range(3):
+        o.append(f'<path d="M{xs[i] + bw} {y1 + bh / 2}H{xs[i + 1] - 4}" stroke="{c["muted"]}" marker-end="url(#ar)"/>')
+        o.append(f'<path d="M{xs[i + 1]} {y2 + bh / 2}H{xs[i] + bw + 4}" stroke="{c["muted"]}" marker-end="url(#ar)"/>')
+    o.append(f'<path d="M{xs[3] + bw / 2} {y1 + bh}V{y2 - 4}" stroke="{c["muted"]}" marker-end="url(#ar)"/>')
+    px = xs[3] + bw + 30
+    o += line(8, f'<rect x="{px}" y="{y2 + 14}" width="{W - px - 24}" height="28" rx="14" fill="none" stroke="{c["accent2"]}"/>',
+              text(px + (W - px - 24) / 2, y2 + 33, "pregunta", c["accent2"], 12, 700, anchor="middle"))
+    o.append(f'<path d="M{px} {y2 + bh / 2}H{xs[3] + bw + 4}" stroke="{c["accent2"]}" marker-end="url(#ar)"/>')
+    ey = y2 + bh + 52
+    o += line(9, f'<rect x="{xs[0]}" y="{ey - 18}" width="{xs[3] + bw - xs[0]}" height="30" rx="7" fill="none" '
+                 f'stroke="{c["line"]}" stroke-dasharray="4 4"/>',
+              text(xs[0] + 14, ey + 2, "evaluación", c["warm"], 13, 700),
+              text(xs[0] + 112, ey + 2, "latencia · recall · costo por consulta · lo que falló vuelve a los datos",
+                   c["muted"], 12))
+    o.append(f'<path class="loop" d="M{xs[0] + bw / 2} {y2 + bh}V{ey - 22}" stroke="{c["warm"]}" stroke-dasharray="4 6" '
+             f'marker-end="url(#ar)"/>')
+    o.append(f'<path class="loop" d="M{xs[0]} {ey - 3}H14V{y1 + bh / 2}H{xs[0] - 4}" fill="none" stroke="{c["warm"]}" '
+             f'stroke-dasharray="4 6" marker-end="url(#ar)"/>')
+    track = (f"M{xs[0] + bw / 2} {y1 + bh / 2}H{xs[3] + bw / 2}V{y2 + bh / 2}H{xs[0] + bw / 2}")
+    for k in range(3):
+        o.append(f'<circle r="4" fill="{c["accent"]}"><animateMotion dur="7s" begin="{k * 2.3:.1f}s" '
+                 f'repeatCount="indefinite" path="{track}"/></circle>')
+    o.append("</svg>")
+    return "\n".join(o)
+
+
+def model_card(c, s):
+    W, H = 960, 430
+    o = svg_open(W, H, "Ficha de modelo de Diego Lojan, Data & AI Engineer")
+    o += frame(c, W, H, "cat MODEL_CARD.md", "huggingface-style")
+    o += line(0, f'<rect x="24" y="52" width="30" height="30" rx="7" fill="none" stroke="{c["accent"]}"/>',
+              text(39, 73, "◆", c["accent"], 16, anchor="middle"),
+              f'<text x="66" y="74" font-family="{MONO}" font-size="21" font-weight="700">'
+              f'<tspan fill="{c["muted"]}">diego-lojan/</tspan><tspan fill="{c["text"]}">data-ai-engineer</tspan></text>')
+    x = 24
+    chips = []
+    for tag in ("rag", "agents", "llm", "data-engineering", "full-stack", "es", "en", "Ecuador"):
+        w = len(tag) * 6.6 + 18
+        chips.append(f'<rect x="{x:.1f}" y="94" width="{w:.1f}" height="22" rx="11" fill="{c["panel2"]}" stroke="{c["line"]}"/>')
+        chips.append(text(x + w / 2, 109, tag, c["accent2"], 11, anchor="middle"))
+        x += w + 8
+    o += line(1, *chips)
+    rows = [("arquitectura", "Ing. Ciencias de la Computación (UNL) · 4 años de software, 2 en producción"),
+            ("entrenamiento", "UNL · UTP Lima · Serviestudios · Dataglov · Indaga Lab · Xynitra · UNAM · Cisco"),
+            ("uso previsto", "llevar modelos de IA a producción y mantenerlos ahí"),
+            ("contexto", "español nativo · inglés B1 (lectura técnica fluida)"),
+            ("fuera de alcance", ".NET y C#: no están en el dataset"),
+            ("cita", "Lojan, D. F. y Chamba-Eras, L. (2026) · Springer Nature · CIT 2026")]
+    y = 150
+    for i, (k, v) in enumerate(rows):
+        parts = [text(24, y, k, c["muted"], 12)]
+        for j, ln in enumerate(wrap(v, 52)):
+            parts.append(text(160, y + j * 18, ln, c["text"], 12))
+        o += line(2 + i, *parts)
+        y += 18 * len(wrap(v, 52)) + 12
+    bx, by, bw = 600, 136, W - 624
+    o.append(f'<rect x="{bx}" y="{by}" width="{bw}" height="196" rx="8" fill="{c["panel2"]}" stroke="{c["line"]}"/>')
+    o.append(text(bx + 16, by + 26, "Evaluation results", c["text"], 13, 700))
+    evals = [("F1", "0,75", "anomalías · 8 países"), ("latencia", "< 2 s", "agente de Wauto"),
+             ("re-embebido", "62k < 1 h", "GPU NVIDIA A6000"), ("modelo", "3,8 MB", "Riksi · 100 especies"),
+             ("vectores", "139.000", "pgvector · HNSW")]
+    for i, (m, v, t) in enumerate(evals):
+        yy = by + 56 + i * 28
+        o += line(3 + i, text(bx + 16, yy, m, c["muted"], 12), text(bx + 118, yy, v, c["accent"], 13, 700),
+                  text(bx + bw - 14, yy, t, c["text"], 11, anchor="end"))
+    keys = sorted(s["months"])[-12:] if s else []
+    if keys:
+        vals = [sum(s["months"][k]) for k in keys]
+        peak = max(vals) or 1
+        sx, sy, sw, sh = bx, by + 214, bw, 40
+        o.append(text(sx, sy, "contribuciones, último año", c["muted"], 11))
+        o.append(text(sx + sw, sy, str(s["total"]), c["text"], 13, 700, anchor="end"))
+        pts = " ".join(f"{sx + i * sw / (len(vals) - 1):.1f},{sy + 12 + sh - v / peak * sh:.1f}" for i, v in enumerate(vals))
+        o.append(f'<polyline points="{pts}" fill="none" stroke="{c["accent"]}" stroke-width="1.6" stroke-linejoin="round"/>')
+    o.append("</svg>")
+    return "\n".join(o)
+
+
+def status_board(c, services):
+    W, H = 960, 96 + len(services) * 28
+    css = " @keyframes pulse { 0%,100% { opacity: 1 } 50% { opacity: .35 } } .dot { animation: pulse 2s ease-in-out infinite }"
+    o = svg_open(W, H, "Estado en vivo de los productos de Diego", css)
+    o += frame(c, W, H, "systemctl status diego.target", "comprobado cada día por la Action")
+    for i, sv in enumerate(services):
+        y = 70 + i * 28
+        ok = sv["code"] is None or 200 <= sv["code"] < 400
+        state = ("active (running)" if sv["url"] else "active (released)") if ok else "failed"
+        parts = [f'<circle class="dot" style="animation-delay:{i * 0.3:.1f}s" cx="30" cy="{y - 4}" r="5" '
+                 f'fill="{c["accent"] if ok else c["hot"]}"/>',
+                 text(46, y, f'{sv["name"]}.service', c["text"], 13, 700),
+                 text(210, y, state, c["accent2"] if ok else c["hot"], 13)]
+        detail = []
+        if sv["tag"]:
+            detail.append(f'{sv["tag"]} · release hace {sv["age"]} d')
+        if sv["url"]:
+            detail.append(f'{sv["url"].split("//")[1].rstrip("/")} {sv["code"]}')
+        parts.append(text(370, y, " · ".join(detail), c["muted"], 12))
+        if sv["ms"] is not None:
+            parts.append(text(W - 24, y, f'{sv["ms"]} ms', c["warm"], 12, anchor="end"))
+        o += line(i, *parts)
+    o.append(text(24, H - 20, f'Loaded: {len(services)} servicios · comprobado {dt.datetime.now(dt.timezone.utc):%Y-%m-%d %H:%M} UTC',
+                  c["muted"], 11))
+    o.append("</svg>")
+    return "\n".join(o)
+
+
+def shipping(c, repos):
+    rows = sorted((r for r in repos if r["recent"] and r["name"] not in HIDDEN_REPOS), key=lambda r: -r["recent"])[:6]
+    W, H = 960, 92 + max(len(rows), 1) * 30
+    o = svg_open(W, H, "Repos con commits en las últimas tres semanas")
+    o += frame(c, W, H, 'git shortlog --since="3 weeks" -sn', "lo que estoy construyendo")
+    if not rows:
+        o.append(text(24, 76, "sin commits públicos en las últimas tres semanas", c["muted"], 13))
+    peak = max((r["recent"] for r in rows), default=1)
+    for i, r in enumerate(rows):
+        y = 74 + i * 30
+        msg = r["last"].get("messageHeadline", "")
+        msg = msg if len(msg) <= 56 else msg[:55] + "…"
+        o += line(i, text(56, y, str(r["recent"]), c["warm"], 14, 700, anchor="end"),
+                  text(72, y, r["name"], c["accent2"], 13, 700),
+                  f'<rect x="250" y="{y - 11}" width="{max(4, 150 * r["recent"] / peak):.0f}" height="12" rx="2" '
+                  f'fill="{c["accent"]}" fill-opacity=".8"/>',
+                  text(420, y, msg, c["text"], 12),
+                  text(W - 24, y, r["last"].get("committedDate", "")[:10], c["muted"], 11, anchor="end"))
+    o.append("</svg>")
+    return "\n".join(o)
+
+
+def code_line(c, x, y, src):
+    kw = {"import", "from", "def", "return", "for", "in"}
+    out = []
+    for tok in re.findall(r'"[^"]*"|\'[^\']*\'|\d+|\w+|\s+|.', src):
+        if tok.strip() and (tok[0] in "\"'"):
+            col = c["warm"]
+        elif tok.isdigit():
+            col = c["accent2"]
+        elif tok in kw:
+            col = c["accent"]
+        else:
+            col = c["text"]
+        out.append(f'<tspan fill="{col}">{escape(tok)}</tspan>')
+    return f'<text x="{x}" y="{y}" font-family="{MONO}" font-size="13" xml:space="preserve">{"".join(out)}</text>'
+
+
+def notebook(c, repos, s):
+    langs = Counter(r["language"] for r in repos if r["language"]).most_common(6)
+    W = 960
+    cells = []
+    summary = [f"{{'rol': 'Data & AI Engineer',", " 'pais': 'Ecuador',",
+               f" 'repos_publicos': {len(repos)},", f" 'contribuciones_365d': {s['total'] if s else 0},",
+               " 'publicaciones': 1}"]
+    cells.append((["import diego", "diego.resumen()"], ("text", summary)))
+    cells.append((['diego.repos().lenguaje.value_counts().head(6).plot.barh()'], ("bars", langs)))
+    cells.append((['diego.ask("¿qué haces?")'], ("text", ["'Llevo modelos de IA a producción y los mantengo ahí.'"])))
+    heights = []
+    for src, (kind, out) in cells:
+        heights.append(24 + len(src) * 20 + 16 + (len(out) * 20 if kind == "text" else len(out) * 24) + 18)
+    H = 70 + sum(heights) + 10
+    o = svg_open(W, H, "Notebook con datos reales del perfil de Diego")
+    o += frame(c, W, H, "jupyter nbconvert --execute diego.ipynb", "Python 3 · ● idle")
+    y = 60
+    for n, ((src, (kind, out)), h) in enumerate(zip(cells, heights), start=1):
+        parts = [text(24, y + 22, f"In [{n}]:", c["accent2"], 12),
+                 f'<rect x="96" y="{y + 6}" width="{W - 120}" height="{len(src) * 20 + 14}" rx="5" '
+                 f'fill="{c["panel2"]}" stroke="{c["line"]}"/>']
+        for j, ln in enumerate(src):
+            parts.append(code_line(c, 108, y + 25 + j * 20, ln))
+        oy = y + len(src) * 20 + 40
+        parts.append(text(24, oy, f"Out[{n}]:", c["hot"], 12))
+        if kind == "text":
+            for j, ln in enumerate(out):
+                parts.append(code_line(c, 108, oy + j * 20, ln))
+        else:
+            peak = max((v for _, v in out), default=1)
+            for j, (lang, v) in enumerate(out):
+                yy = oy - 12 + j * 24
+                parts += [text(108, yy + 12, lang, c["text"], 12),
+                          f'<rect x="230" y="{yy + 1}" width="{460 * v / peak:.0f}" height="14" rx="2" '
+                          f'fill="{c["accent"]}" fill-opacity="{0.9 - j * 0.1:.2f}"/>',
+                          text(240 + 460 * v / peak, yy + 12, str(v), c["muted"], 11)]
+        o += line(n - 1, *parts)
+        y += h
+    o.append("</svg>")
+    return "\n".join(o)
+
+
+def cluster_names(groups, fallback):
+    """Nombra cada cluster con el LLM del agente; guarda los nombres por composición para que no cambien a diario."""
+    cache_file = OUT / "repomap-names.json"
+    cache = json.loads(cache_file.read_text(encoding="utf-8")) if cache_file.exists() else {}
+    key = "|".join(",".join(sorted(r["name"] for r in g)) for g in groups)
+    if key in cache:
+        return cache[key]
+    if not os.environ.get("GROQ_API_KEY"):
+        return fallback
+    try:
+        sys.path.insert(0, str(Path(__file__).parent))
+        import agente
+        def about(r):
+            first = re.sub(r"[#<>*`\[\]()!|]", " ", r["readme"])[:160]
+            return f'{r["name"]} [{r["language"] or "?"}]: {(r["description"] or first).strip()[:110]}'
+
+        listing = "\n\n".join(f"grupo {j} ({len(g)} repos):\n" + "\n".join(f"- {about(r)}" for r in g)
+                              for j, g in enumerate(groups))
+        out, _ = agente.chat([
+            {"role": "system", "content": "Pones nombres a grupos de repositorios de un ingeniero de datos e IA. "
+             "Responde solo un JSON con la forma {\"0\": \"nombre\", \"1\": \"nombre\"}. Cada nombre: 2 a 3 "
+             "palabras en español y en minúsculas, que digan lo que comparte la MAYORÍA de los repos del grupo "
+             "(por ejemplo: ia y agentes, ciencia de datos, apps web, tareas de la u). Fíjate en lenguajes y "
+             "temas, no en una palabra suelta. Sin guiones largos."},
+            {"role": "user", "content": listing}], max_tokens=300)
+        names = json.loads(re.search(r"\{.*\}", out, re.S).group(0))
+        result = [str(names.get(str(j), fallback[j]))[:28] for j in range(len(groups))]
+    except Exception as e:  # sin LLM: las palabras más frecuentes
+        print("nombres de clusters sin LLM:", e)
+        return fallback
+    cache[key] = result
+    cache_file.write_text(json.dumps(cache, ensure_ascii=False, indent=1), encoding="utf-8")
+    return result
+
+
+def repo_map(c, repos):
+    from sklearn.cluster import KMeans
+    from sklearn.decomposition import TruncatedSVD
+    from sklearn.feature_extraction.text import TfidfVectorizer
+    from sklearn.manifold import TSNE
+    from sklearn.preprocessing import normalize
+
+    repos = [r for r in repos if r["name"] not in HIDDEN_REPOS]
+    split = lambda n: re.sub(r"([a-z])([A-Z])", r"\1 \2", n).replace("-", " ").replace("_", " ")
+    docs = [" ".join([split(r["name"])] * 3 + [r["description"]] * 3 + [" ".join(r["topics"])] * 3 +
+                     [r["language"] or "", re.sub(r"<[^>]+>|\(http\S+\)|`", " ", r["readme"][:900])]) for r in repos]
+    vec = TfidfVectorizer(stop_words=list(STOP_WORDS), max_features=2500, min_df=2, sublinear_tf=True,
+                          token_pattern=r"(?u)\b[a-zA-Záéíóúñ][a-zA-Záéíóúñ0-9]{2,}\b")
+    X = vec.fit_transform(docs)
+    Z = normalize(TruncatedSVD(n_components=min(16, len(repos) - 1), random_state=SEED).fit_transform(X))
+    P = TSNE(n_components=2, perplexity=min(8, len(repos) - 1), init="pca", random_state=SEED).fit_transform(Z)
+    k = 4
+    labels = KMeans(n_clusters=k, n_init=10, random_state=SEED).fit_predict(Z)
+    terms = np.array(vec.get_feature_names_out())
+    names = []
+    for j in range(k):
+        centroid = np.asarray(X[labels == j].mean(axis=0)).ravel()
+        names.append(" · ".join(terms[centroid.argsort()[::-1][:2]]))
+    names = cluster_names([[repos[i] for i in range(len(repos)) if labels[i] == j] for j in range(k)], names)
+
+    W, H = 960, 500
+    x0, y0, x1, y1 = 50, 74, W - 300, H - 36
+    P = (P - P.min(0)) / (np.ptp(P, 0) + 1e-9)
+    pts = np.column_stack([x0 + P[:, 0] * (x1 - x0), y0 + P[:, 1] * (y1 - y0)])
+    shades = [c["accent"], c["accent2"], c["warm"], c["hot"]]
+    css = " @keyframes pop { from { opacity: 0; transform: scale(.4) } to { opacity: 1; transform: none } }" \
+          " .p { transform-box: fill-box; transform-origin: center; animation: pop .6s ease-out both }" \
+          " @keyframes ring { 0% { r: 6; opacity: .9 } 100% { r: 16; opacity: 0 } } .ring { animation: ring 2s ease-out infinite }"
+    o = svg_open(W, H, "Mapa de mis repositorios por tema: TF-IDF, SVD y t-SNE", css)
+    o += frame(c, W, H, "python mapa_repos.py", f"TF-IDF + SVD + t-SNE · k-means k={k} · {len(repos)} repos")
+    def marker(kind, x, y, r, fill, extra=""):
+        if kind == 0:
+            return f'<circle {extra} cx="{x:.1f}" cy="{y:.1f}" r="{r:.1f}" fill="{fill}"/>'
+        if kind == 1:
+            return (f'<rect {extra} x="{x - r:.1f}" y="{y - r:.1f}" width="{2 * r:.1f}" height="{2 * r:.1f}" '
+                    f'rx="1.5" fill="{fill}"/>')
+        if kind == 2:
+            return (f'<polygon {extra} points="{x:.1f},{y - r * 1.2:.1f} {x + r * 1.1:.1f},{y + r * .8:.1f} '
+                    f'{x - r * 1.1:.1f},{y + r * .8:.1f}" fill="{fill}"/>')
+        return (f'<polygon {extra} points="{x:.1f},{y - r * 1.25:.1f} {x + r * 1.1:.1f},{y:.1f} '
+                f'{x:.1f},{y + r * 1.25:.1f} {x - r * 1.1:.1f},{y:.1f}" fill="{fill}"/>')
+
+    order = sorted(range(len(repos)), key=lambda i: (-repos[i]["recent"], -repos[i]["stars"],
+                                                     -dt.datetime.fromisoformat(repos[i]["pushed"].replace("Z", "+00:00")).timestamp()))
+    radius = [4 + 2.2 * math.log1p(repos[i]["stars"]) for i in range(len(repos))]
+    taken = [(x - r - 1, y - r - 1, x + r + 1, y + r + 1) for (x, y), r in zip(pts, radius)]
+    recent_cut = dt.datetime.now(dt.timezone.utc) - dt.timedelta(days=30)
+    for n, i in enumerate(order):
+        x, y = pts[i]
+        if dt.datetime.fromisoformat(repos[i]["pushed"].replace("Z", "+00:00")) > recent_cut:
+            o.append(f'<circle class="ring" cx="{x:.1f}" cy="{y:.1f}" r="6" fill="none" stroke="{shades[labels[i]]}"/>')
+        o.append(marker(labels[i], x, y, radius[i], shades[labels[i]],
+                        f'class="p" style="animation-delay:{0.02 * n:.2f}s" fill-opacity=".9"'))
+    for i in order[:26]:
+        x, y = pts[i]
+        r = radius[i]
+        name = repos[i]["name"] if len(repos[i]["name"]) <= 24 else repos[i]["name"][:23] + "…"
+        w = len(name) * 6 + 2
+        for bx in (x + r + 4, x - r - 4 - w):
+            box = (bx, y - 9, bx + w, y + 3)
+            if box[0] > 20 and box[2] < W - 290 and all(
+                    box[2] < t[0] or box[0] > t[2] or box[3] < t[1] or box[1] > t[3] for t in taken):
+                taken.append(box)
+                o.append(text(bx, y + 2, name, c["text"], 10))
+                break
+    lx = W - 270
+    o.append(f'<path d="M{lx - 20} 70V{H - 30}" stroke="{c["line"]}"/>')
+    o.append(text(lx, 92, "clusters (k-means)", c["muted"], 11, 700))
+    for j in range(k):
+        ly = 122 + j * 34
+        o.append(marker(j, lx + 6, ly - 4, 6, shades[j]))
+        o.append(text(lx + 22, ly, f"c{j} · {names[j]}", c["text"], 12))
+        o.append(text(lx + 22, ly + 14, f"{int((labels == j).sum())} repos", c["muted"], 10))
+    ly = 122 + k * 34
+    o.append(f'<circle cx="{lx + 6}" cy="{ly + 2}" r="6" fill="none" stroke="{c["muted"]}"/>')
+    o.append(text(lx + 22, ly + 6, "commits este mes", c["muted"], 11))
+    o.append(text(lx, ly + 32, "tamaño = estrellas", c["muted"], 11))
+    o.append(text(lx, H - 40, "cada punto es un repo público;", c["muted"], 10))
+    o.append(text(lx, H - 26, "cerca = de qué trata su README", c["muted"], 10))
+    o.append("</svg>")
+    return "\n".join(o)
+
+
 # ---------- README ----------
 
 def render_readme(pal):
@@ -741,11 +1240,12 @@ def render_readme(pal):
 def main():
     name = sys.argv[1] if len(sys.argv) > 1 else DEFAULT_PALETTE
     pal = PALETTES[name]
+    act = summary = extras = None
     try:
         act = fetch_activity()
         summary = activity_summary(act)
+        extras = fetch_extras(github_token(), act["uid"])
     except (OSError, RuntimeError, subprocess.CalledProcessError) as e:
-        act = None
         print(f"sin datos de actividad ({e}); se dejan los SVG que había")
     for mode, c in pal.items():
         (OUT / f"banner-{mode}.svg").write_text(banner(c, mode), encoding="utf-8")
@@ -755,6 +1255,16 @@ def main():
             radar(c, SKILLS, "skills.radar", "autoevaluación · 0-100"), encoding="utf-8")
         (OUT / f"radar-langs-{mode}.svg").write_text(
             radar(c, LANGS, "langs.radar", "uso real · 0-100"), encoding="utf-8")
+        (OUT / f"pipeline-{mode}.svg").write_text(pipeline(c), encoding="utf-8")
+        (OUT / f"ask-{mode}.svg").write_text(ask_button(c), encoding="utf-8")
+        if summary:
+            (OUT / f"modelcard-{mode}.svg").write_text(model_card(c, summary), encoding="utf-8")
+        if extras:
+            (OUT / f"agent-{mode}.svg").write_text(agent_card(c, extras["agent"]), encoding="utf-8")
+            (OUT / f"status-{mode}.svg").write_text(status_board(c, extras["services"]), encoding="utf-8")
+            (OUT / f"shipping-{mode}.svg").write_text(shipping(c, extras["repos"]), encoding="utf-8")
+            (OUT / f"notebook-{mode}.svg").write_text(notebook(c, extras["repos"], summary), encoding="utf-8")
+            (OUT / f"repomap-{mode}.svg").write_text(repo_map(c, extras["repos"]), encoding="utf-8")
         if act:
             (OUT / f"activity-{mode}.svg").write_text(heatmap(c, act, summary), encoding="utf-8")
             (OUT / f"monthly-{mode}.svg").write_text(monthly(c, summary), encoding="utf-8")

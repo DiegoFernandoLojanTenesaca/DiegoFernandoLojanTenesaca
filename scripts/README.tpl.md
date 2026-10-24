@@ -34,6 +34,42 @@
 
 ---
 
+## `$ ask diego-agent`
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/agent-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/agent-light.svg">
+    <img src="assets/agent-dark.svg" width="960" alt="Última pregunta que respondió el agente del perfil: recuperación con BM25 sobre el CV y respuesta de un LLM en Groq">
+  </picture>
+</p>
+
+<p align="center">
+  <a href="https://github.com/DiegoFernandoLojanTenesaca/DiegoFernandoLojanTenesaca/issues/new?template=pregunta.yml">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="assets/ask-dark.svg">
+      <source media="(prefers-color-scheme: light)" srcset="assets/ask-light.svg">
+      <img src="assets/ask-dark.svg" width="420" alt="Preguntarle al agente">
+    </picture>
+  </a>
+</p>
+
+<p align="center"><sub>Abre un Issue con tu pregunta sobre mi experiencia, proyectos o stack: una Action recupera lo relevante de mi CV y un LLM responde en un minuto. <a href="https://github.com/DiegoFernandoLojanTenesaca/DiegoFernandoLojanTenesaca/issues?q=label%3Arespondida">Preguntas anteriores</a>.</sub></p>
+
+---
+
+## `$ cat MODEL_CARD.md`
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/modelcard-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/modelcard-light.svg">
+    <img src="assets/modelcard-dark.svg" width="960" alt="Ficha de modelo de Diego: arquitectura, datos de entrenamiento, uso previsto, limitaciones y métricas reales de sus proyectos">
+  </picture>
+</p>
+
+---
+
 ## `$ git log --graph trayectoria`
 
 <p align="center">
@@ -41,6 +77,18 @@
     <source media="(prefers-color-scheme: dark)" srcset="assets/timeline-dark.svg">
     <source media="(prefers-color-scheme: light)" srcset="assets/timeline-light.svg">
     <img src="assets/timeline-dark.svg" width="960" alt="Trayectoria de Diego en forma de git log: trabajo, proyectos y formación">
+  </picture>
+</p>
+
+---
+
+## `$ cat rag.pipeline`
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/pipeline-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/pipeline-light.svg">
+    <img src="assets/pipeline-dark.svg" width="960" alt="Cómo construyo un sistema RAG: fuentes, ETL, embeddings, pgvector, recuperación híbrida, LLM con failover, guardas, respuesta y evaluación">
   </picture>
 </p>
 
@@ -184,6 +232,56 @@
 
 ---
 
+## `$ systemctl status diego.target`
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/status-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/status-light.svg">
+    <img src="assets/status-dark.svg" width="960" alt="Estado en vivo de mis productos: webs que responden y última versión publicada">
+  </picture>
+</p>
+
+---
+
+## `$ git shortlog --since="3 weeks"`
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/shipping-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/shipping-light.svg">
+    <img src="assets/shipping-dark.svg" width="960" alt="Repos con commits en las últimas tres semanas">
+  </picture>
+</p>
+
+---
+
+## `$ jupyter nbconvert --execute diego.ipynb`
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/notebook-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/notebook-light.svg">
+    <img src="assets/notebook-dark.svg" width="960" alt="Notebook con datos reales de mi perfil: resumen, lenguajes por repositorio y una pregunta">
+  </picture>
+</p>
+
+---
+
+## `$ python mapa_repos.py`
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/repomap-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/repomap-light.svg">
+    <img src="assets/repomap-dark.svg" width="960" alt="Mapa de mis repositorios públicos agrupados por tema con TF-IDF, SVD, t-SNE y k-means">
+  </picture>
+</p>
+
+<p align="center"><sub>Los nombres de los grupos los pone el mismo LLM del agente, a partir de lo que tienen los repos de cada grupo.</sub></p>
+
+---
+
 ## `$ git log --since="1 year"`
 
 <p align="center">
@@ -199,6 +297,14 @@
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/DiegoFernandoLojanTenesaca/DiegoFernandoLojanTenesaca/output/snake-dark.svg">
     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/DiegoFernandoLojanTenesaca/DiegoFernandoLojanTenesaca/output/snake-light.svg">
     <img src="https://raw.githubusercontent.com/DiegoFernandoLojanTenesaca/DiegoFernandoLojanTenesaca/output/snake-light.svg" width="960" alt="Serpiente que recorre las contribuciones de GitHub">
+  </picture>
+</p>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/DiegoFernandoLojanTenesaca/DiegoFernandoLojanTenesaca/output/pacman-contribution-graph-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/DiegoFernandoLojanTenesaca/DiegoFernandoLojanTenesaca/output/pacman-contribution-graph.svg">
+    <img src="https://raw.githubusercontent.com/DiegoFernandoLojanTenesaca/DiegoFernandoLojanTenesaca/output/pacman-contribution-graph-dark.svg" width="960" alt="Pac-Man que se come las contribuciones de GitHub">
   </picture>
 </p>
 
@@ -223,7 +329,7 @@
   </picture>
 </p>
 
-<sub>Se actualiza cada día con una GitHub Action. El mapa y las cifras juntan GitHub y GitLab; la serpiente recorre solo GitHub.</sub>
+<sub>Se actualiza cada día con una GitHub Action. El mapa y las cifras juntan GitHub y GitLab; la serpiente y Pac-Man recorren solo GitHub.</sub>
 
 ---
 
