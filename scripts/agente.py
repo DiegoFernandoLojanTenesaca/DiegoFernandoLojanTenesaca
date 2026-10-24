@@ -17,6 +17,7 @@ import re
 import sys
 import time
 import unicodedata
+import urllib.parse
 import urllib.request
 from collections import Counter
 from pathlib import Path
@@ -29,6 +30,8 @@ MODELS = [
 ]
 TOP_K = 4
 MAX_QUESTION = 600
+MAX_PER_USER_DAY = 3
+MAX_PER_DAY = 30
 STOP = set("""a al algo como con cual cuales de del desde donde el ella en entre es esa ese eso esta este esto
 fue ha han hay la las le les lo los mas me mi mis muy no o para pero por que quien se sea ser si sin sobre su sus
 tambien te tiene tu tus un una uno unos y ya yo diego usaste usa uso has hiciste haces sabes
@@ -132,12 +135,31 @@ def answer(question: str) -> dict:
             "ms": round((time.perf_counter() - t0) * 1000)}
 
 
-def comment_body(result: dict) -> str:
+def english(question: str) -> bool:
+    return len(re.findall(r"\b(what|how|is|are|does|did|has|have|the|and|which|who|where|when|why|can|he|his)\b",
+                          question.lower())) >= 2
+
+
+def comment_body(result: dict, question: str) -> str:
     fuentes = " · ".join(f"`{f}`" for f in result["fuentes"])
     meta = json.dumps({k: result[k] for k in ("fuentes", "modelo", "ms")}, ensure_ascii=False)
-    return (f"{result['respuesta']}\n\n<sub>🔎 fuentes: {fuentes} · modelo `{result['modelo']}` · "
-            f"{result['ms'] / 1000:.1f} s · respondido por la Action del perfil (RAG con BM25 sobre su CV). "
-            f"Para algo más, escríbele a fernando.lojan10@gmail.com.</sub>\n\n<!-- agente: {meta} -->")
+    if english(question):
+        foot = (f"🔎 sources: {fuentes} · model `{result['modelo']}` · {result['ms'] / 1000:.1f} s · answered by "
+                f"this profile's Action (RAG with BM25 over his CV). For anything else, email fernando.lojan10@gmail.com.")
+    else:
+        foot = (f"🔎 fuentes: {fuentes} · modelo `{result['modelo']}` · {result['ms'] / 1000:.1f} s · respondido "
+                f"por la Action del perfil (RAG con BM25 sobre su CV). Para algo más, escríbele a fernando.lojan10@gmail.com.")
+    return f"{result['respuesta']}\n\n<sub>{foot}</sub>\n\n<!-- agente: {meta} -->"
+
+
+def answered_today(repo: str, token: str, user: str | None = None) -> int:
+    q = f"repo:{repo} label:respondida created:>={time.strftime('%Y-%m-%d', time.gmtime())}"
+    if user:
+        q += f" author:{user}"
+    url = "https://api.github.com/search/issues?q=" + urllib.parse.quote(q)
+    req = urllib.request.Request(url, headers={"Authorization": f"Bearer {token}", "User-Agent": "diego-agent"})
+    with urllib.request.urlopen(req, timeout=30) as r:
+        return json.load(r)["total_count"]
 
 
 def from_issue() -> None:
@@ -148,10 +170,28 @@ def from_issue() -> None:
     body = re.sub(r"^###.*$", "", issue.get("body") or "", flags=re.M).strip()
     title = re.sub(r"^\s*pregunta\s*:\s*", "", issue["title"], flags=re.I).strip()
     question = body if len(body) > len(title) else title
-    result = answer(question)
-    api = f"https://api.github.com/repos/{os.environ['GITHUB_REPOSITORY']}/issues/{issue['number']}"
+    repo = os.environ["GITHUB_REPOSITORY"]
+    api = f"https://api.github.com/repos/{repo}/issues/{issue['number']}"
     token = os.environ["GITHUB_TOKEN"]
-    post(f"{api}/comments", {"body": comment_body(result)}, token)
+    en = english(question)
+    if (answered_today(repo, token, issue["user"]["login"]) >= MAX_PER_USER_DAY
+            or answered_today(repo, token) >= MAX_PER_DAY):
+        post(f"{api}/comments", {"body": (
+            "The agent has reached today's limit of answers. Please try again tomorrow, or email "
+            "fernando.lojan10@gmail.com." if en else
+            "El agente llegó al límite de respuestas de hoy. Prueba mañana o escríbele a fernando.lojan10@gmail.com.")},
+            token)
+        return
+    try:
+        result = answer(question)
+    except Exception as e:  # sin LLM: el visitante recibe un aviso y Diego ve el Issue abierto
+        post(f"{api}/comments", {"body": (
+            "The agent could not answer right now. Diego will see this question, or you can email "
+            "fernando.lojan10@gmail.com." if en else
+            "El agente no pudo responder en este momento. Diego verá tu pregunta; también puedes escribirle a "
+            "fernando.lojan10@gmail.com.")}, token)
+        raise SystemExit(f"sin respuesta del LLM: {e}")
+    post(f"{api}/comments", {"body": comment_body(result, question)}, token)
     post(f"{api}/labels", {"labels": ["respondida"]}, token)
     post(api, {"state": "closed", "state_reason": "completed"}, token, method="PATCH")
     print(json.dumps(result, ensure_ascii=False))

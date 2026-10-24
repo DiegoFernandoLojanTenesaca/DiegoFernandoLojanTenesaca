@@ -60,7 +60,11 @@ jobs:
               return "#%02x%02x%02x" % (y, y, y)
           for f in glob.glob("dist/pacman-*.svg"):
               s = open(f, encoding="utf-8").read()
-              open(f, "w", encoding="utf-8").write(re.sub(r"#([0-9a-fA-F]{6}|[0-9a-fA-F]{3})\b", gris, s))
+              s = re.sub(r"#([0-9a-fA-F]{6}|[0-9a-fA-F]{3})\b", gris, s)
+              s = re.sub(r"(<svg\b[^>]*>)", r'\1<defs><filter id="bn"><feColorMatrix type="saturate" values="0"/>'
+                         r'</filter></defs><g filter="url(#bn)">', s, count=1)
+              head, _, tail = s.rpartition("</svg>")
+              open(f, "w", encoding="utf-8").write(head + "</g></svg>" + tail)
       - uses: crazy-max/ghaction-github-pages@v5
         with:
           target_branch: output
