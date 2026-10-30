@@ -12,7 +12,7 @@
 <text x="108" y="140" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13" xml:space="preserve"><tspan fill="#111111">{</tspan><tspan fill="#3A3A3A">&#x27;rol&#x27;</tspan><tspan fill="#111111">:</tspan><tspan fill="#111111"> </tspan><tspan fill="#3A3A3A">&#x27;Data &amp; AI Engineer&#x27;</tspan><tspan fill="#111111">,</tspan></text>
 <text x="108" y="160" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13" xml:space="preserve"><tspan fill="#111111"> </tspan><tspan fill="#3A3A3A">&#x27;pais&#x27;</tspan><tspan fill="#111111">:</tspan><tspan fill="#111111"> </tspan><tspan fill="#3A3A3A">&#x27;Ecuador&#x27;</tspan><tspan fill="#111111">,</tspan></text>
 <text x="108" y="180" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13" xml:space="preserve"><tspan fill="#111111"> </tspan><tspan fill="#3A3A3A">&#x27;repos_publicos&#x27;</tspan><tspan fill="#111111">:</tspan><tspan fill="#111111"> </tspan><tspan fill="#6B6B6B">43</tspan><tspan fill="#111111">,</tspan></text>
-<text x="108" y="200" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13" xml:space="preserve"><tspan fill="#111111"> </tspan><tspan fill="#3A3A3A">&#x27;contribuciones_365d&#x27;</tspan><tspan fill="#111111">:</tspan><tspan fill="#111111"> </tspan><tspan fill="#6B6B6B">973</tspan><tspan fill="#111111">,</tspan></text>
+<text x="108" y="200" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13" xml:space="preserve"><tspan fill="#111111"> </tspan><tspan fill="#3A3A3A">&#x27;contribuciones_365d&#x27;</tspan><tspan fill="#111111">:</tspan><tspan fill="#111111"> </tspan><tspan fill="#6B6B6B">980</tspan><tspan fill="#111111">,</tspan></text>
 <text x="108" y="220" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13" xml:space="preserve"><tspan fill="#111111"> </tspan><tspan fill="#3A3A3A">&#x27;publicaciones&#x27;</tspan><tspan fill="#111111">:</tspan><tspan fill="#111111"> </tspan><tspan fill="#6B6B6B">1</tspan><tspan fill="#111111">}</tspan></text>
 </g>
 <g class="l" style="animation-delay:0.32s">
@@ -35,7 +35,7 @@
 <text x="108.0" y="414.0" fill="#111111" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="12">Jupyter Notebook</text>
 <rect x="230" y="403" width="153" height="14" rx="2" fill="#111111" fill-opacity="0.50"/>
 <text x="393.3" y="414.0" fill="#6E6E6E" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="11">4</text>
-<text x="108.0" y="438.0" fill="#111111" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="12">Astro</text>
+<text x="108.0" y="438.0" fill="#111111" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="12">Rust</text>
 <rect x="230" y="427" width="77" height="14" rx="2" fill="#111111" fill-opacity="0.40"/>
 <text x="316.7" y="438.0" fill="#6E6E6E" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="11">2</text>
 </g>
