@@ -4,24 +4,24 @@
 <text x="20.0" y="30.0" fill="#111111" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13" font-weight="700">git shortlog --since=&quot;3 weeks&quot; -sn</text>
 <text x="940.0" y="30.0" fill="#6E6E6E" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="10" text-anchor="end">lo que estoy construyendo</text>
 <g class="l" style="animation-delay:0.20s">
-<text x="56.0" y="74.0" fill="#3A3A3A" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="14" font-weight="700" text-anchor="end">23</text>
+<text x="56.0" y="74.0" fill="#3A3A3A" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="14" font-weight="700" text-anchor="end">26</text>
 <text x="72.0" y="74.0" fill="#6B6B6B" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13" font-weight="700">mythborn</text>
 <rect x="250" y="63" width="150" height="12" rx="2" fill="#111111" fill-opacity=".8"/>
-<text x="420.0" y="74.0" fill="#111111" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="12">docs: curseforge link</text>
-<text x="936.0" y="74.0" fill="#6E6E6E" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="11" text-anchor="end">2026-11-25</text>
+<text x="420.0" y="74.0" fill="#111111" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="12">chore: version 1.1.2</text>
+<text x="936.0" y="74.0" fill="#6E6E6E" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="11" text-anchor="end">2026-11-26</text>
 </g>
 <g class="l" style="animation-delay:0.32s">
-<text x="56.0" y="104.0" fill="#3A3A3A" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="14" font-weight="700" text-anchor="end">21</text>
+<text x="56.0" y="104.0" fill="#3A3A3A" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="14" font-weight="700" text-anchor="end">24</text>
 <text x="72.0" y="104.0" fill="#6B6B6B" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13" font-weight="700">saddlehud</text>
-<rect x="250" y="93" width="137" height="12" rx="2" fill="#111111" fill-opacity=".8"/>
-<text x="420.0" y="104.0" fill="#111111" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="12">chore: release 26.3-1.0.1</text>
-<text x="936.0" y="104.0" fill="#6E6E6E" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="11" text-anchor="end">2026-11-22</text>
+<rect x="250" y="93" width="138" height="12" rx="2" fill="#111111" fill-opacity=".8"/>
+<text x="420.0" y="104.0" fill="#111111" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="12">docs: readme with sections and badges</text>
+<text x="936.0" y="104.0" fill="#6E6E6E" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="11" text-anchor="end">2026-11-25</text>
 </g>
 <g class="l" style="animation-delay:0.44s">
-<text x="56.0" y="134.0" fill="#3A3A3A" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="14" font-weight="700" text-anchor="end">17</text>
+<text x="56.0" y="134.0" fill="#3A3A3A" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="14" font-weight="700" text-anchor="end">20</text>
 <text x="72.0" y="134.0" fill="#6B6B6B" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13" font-weight="700">wyrmwing</text>
-<rect x="250" y="123" width="111" height="12" rx="2" fill="#111111" fill-opacity=".8"/>
-<text x="420.0" y="134.0" fill="#111111" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="12">chore: release 26.3-1.0.1</text>
-<text x="936.0" y="134.0" fill="#6E6E6E" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="11" text-anchor="end">2026-11-22</text>
+<rect x="250" y="123" width="115" height="12" rx="2" fill="#111111" fill-opacity=".8"/>
+<text x="420.0" y="134.0" fill="#111111" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="12">docs: readme with sections and badges</text>
+<text x="936.0" y="134.0" fill="#6E6E6E" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="11" text-anchor="end">2026-11-25</text>
 </g>
 </svg>
