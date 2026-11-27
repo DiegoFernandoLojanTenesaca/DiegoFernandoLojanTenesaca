@@ -3,58 +3,58 @@
 <rect width="960" height="500" rx="14" fill="#FFFFFF" stroke="#D4D4D4"/>
 <text x="20.0" y="30.0" fill="#111111" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13" font-weight="700">python mapa_repos.py</text>
 <text x="940.0" y="30.0" fill="#6E6E6E" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="10" text-anchor="end">TF-IDF + SVD + t-SNE · k-means k=4 · 46 repos</text>
-<circle class="ring" cx="631.9" cy="250.1" r="6" fill="none" stroke="#111111"/>
-<circle class="p" style="animation-delay:0.00s" fill-opacity=".9" cx="631.9" cy="250.1" r="4.0" fill="#111111"/>
-<circle class="ring" cx="659.4" cy="261.3" r="6" fill="none" stroke="#111111"/>
-<circle class="p" style="animation-delay:0.02s" fill-opacity=".9" cx="659.4" cy="261.3" r="4.0" fill="#111111"/>
-<circle class="ring" cx="660.0" cy="237.9" r="6" fill="none" stroke="#111111"/>
-<circle class="p" style="animation-delay:0.04s" fill-opacity=".9" cx="660.0" cy="237.9" r="4.0" fill="#111111"/>
-<rect class="p" style="animation-delay:0.06s" fill-opacity=".9" x="361.7" y="183.6" width="12.8" height="12.8" rx="1.5" fill="#6B6B6B"/>
-<polygon class="p" style="animation-delay:0.08s" fill-opacity=".9" points="180.0,200.6 186.0,211.6 173.9,211.6" fill="#3A3A3A"/>
-<circle class="ring" cx="355.9" cy="448.0" r="6" fill="none" stroke="#9A9A9A"/>
-<polygon class="p" style="animation-delay:0.10s" fill-opacity=".9" points="355.9,443.0 360.3,448.0 355.9,453.0 351.5,448.0" fill="#9A9A9A"/>
-<circle class="ring" cx="439.6" cy="309.5" r="6" fill="none" stroke="#9A9A9A"/>
-<polygon class="p" style="animation-delay:0.12s" fill-opacity=".9" points="439.6,304.5 444.0,309.5 439.6,314.5 435.2,309.5" fill="#9A9A9A"/>
-<circle class="ring" cx="208.3" cy="367.0" r="6" fill="none" stroke="#3A3A3A"/>
-<polygon class="p" style="animation-delay:0.14s" fill-opacity=".9" points="208.3,362.2 212.7,370.2 203.9,370.2" fill="#3A3A3A"/>
-<polygon class="p" style="animation-delay:0.16s" fill-opacity=".9" points="459.9,379.3 464.3,384.3 459.9,389.3 455.5,384.3" fill="#9A9A9A"/>
-<polygon class="p" style="animation-delay:0.18s" fill-opacity=".9" points="466.7,358.9 471.1,363.9 466.7,368.9 462.3,363.9" fill="#9A9A9A"/>
-<polygon class="p" style="animation-delay:0.20s" fill-opacity=".9" points="239.7,233.7 244.1,241.7 235.3,241.7" fill="#3A3A3A"/>
-<rect class="p" style="animation-delay:0.22s" fill-opacity=".9" x="311.4" y="249.1" width="8.0" height="8.0" rx="1.5" fill="#6B6B6B"/>
-<rect class="p" style="animation-delay:0.24s" fill-opacity=".9" x="268.6" y="254.8" width="8.0" height="8.0" rx="1.5" fill="#6B6B6B"/>
-<rect class="p" style="animation-delay:0.26s" fill-opacity=".9" x="286.2" y="271.4" width="8.0" height="8.0" rx="1.5" fill="#6B6B6B"/>
+<circle class="ring" cx="631.9" cy="250.1" r="6" fill="none" stroke="#3A3A3A"/>
+<polygon class="p" style="animation-delay:0.00s" fill-opacity=".9" points="631.9,245.3 636.3,253.3 627.5,253.3" fill="#3A3A3A"/>
+<circle class="ring" cx="659.4" cy="261.3" r="6" fill="none" stroke="#3A3A3A"/>
+<polygon class="p" style="animation-delay:0.02s" fill-opacity=".9" points="659.4,256.5 663.8,264.5 655.0,264.5" fill="#3A3A3A"/>
+<circle class="ring" cx="660.0" cy="237.9" r="6" fill="none" stroke="#3A3A3A"/>
+<polygon class="p" style="animation-delay:0.04s" fill-opacity=".9" points="660.0,233.1 664.4,241.1 655.6,241.1" fill="#3A3A3A"/>
+<polygon class="p" style="animation-delay:0.06s" fill-opacity=".9" points="368.1,182.0 375.2,190.0 368.1,198.1 361.1,190.0" fill="#9A9A9A"/>
+<polygon class="p" style="animation-delay:0.08s" fill-opacity=".9" points="180.0,200.3 186.0,207.2 180.0,214.1 173.9,207.2" fill="#9A9A9A"/>
+<circle class="ring" cx="355.9" cy="448.0" r="6" fill="none" stroke="#6B6B6B"/>
+<rect class="p" style="animation-delay:0.10s" fill-opacity=".9" x="351.9" y="444.0" width="8.0" height="8.0" rx="1.5" fill="#6B6B6B"/>
+<circle class="ring" cx="439.6" cy="309.5" r="6" fill="none" stroke="#6B6B6B"/>
+<rect class="p" style="animation-delay:0.12s" fill-opacity=".9" x="435.6" y="305.5" width="8.0" height="8.0" rx="1.5" fill="#6B6B6B"/>
+<circle class="ring" cx="208.3" cy="367.0" r="6" fill="none" stroke="#6B6B6B"/>
+<rect class="p" style="animation-delay:0.14s" fill-opacity=".9" x="204.3" y="363.0" width="8.0" height="8.0" rx="1.5" fill="#6B6B6B"/>
+<rect class="p" style="animation-delay:0.16s" fill-opacity=".9" x="455.9" y="380.3" width="8.0" height="8.0" rx="1.5" fill="#6B6B6B"/>
+<rect class="p" style="animation-delay:0.18s" fill-opacity=".9" x="462.7" y="359.9" width="8.0" height="8.0" rx="1.5" fill="#6B6B6B"/>
+<circle class="p" style="animation-delay:0.20s" fill-opacity=".9" cx="239.7" cy="238.5" r="4.0" fill="#111111"/>
+<circle class="p" style="animation-delay:0.22s" fill-opacity=".9" cx="315.4" cy="253.1" r="4.0" fill="#111111"/>
+<circle class="p" style="animation-delay:0.24s" fill-opacity=".9" cx="272.6" cy="258.8" r="4.0" fill="#111111"/>
+<circle class="p" style="animation-delay:0.26s" fill-opacity=".9" cx="290.2" cy="275.4" r="4.0" fill="#111111"/>
 <rect class="p" style="animation-delay:0.28s" fill-opacity=".9" x="336.5" y="349.4" width="8.0" height="8.0" rx="1.5" fill="#6B6B6B"/>
-<polygon class="p" style="animation-delay:0.30s" fill-opacity=".9" points="504.2,406.9 508.6,411.9 504.2,416.9 499.8,411.9" fill="#9A9A9A"/>
-<polygon class="p" style="animation-delay:0.32s" fill-opacity=".9" points="178.1,377.3 182.5,385.3 173.7,385.3" fill="#3A3A3A"/>
-<polygon class="p" style="animation-delay:0.34s" fill-opacity=".9" points="495.9,386.7 500.3,391.7 495.9,396.7 491.5,391.7" fill="#9A9A9A"/>
+<rect class="p" style="animation-delay:0.30s" fill-opacity=".9" x="500.2" y="407.9" width="8.0" height="8.0" rx="1.5" fill="#6B6B6B"/>
+<rect class="p" style="animation-delay:0.32s" fill-opacity=".9" x="174.1" y="378.1" width="8.0" height="8.0" rx="1.5" fill="#6B6B6B"/>
+<rect class="p" style="animation-delay:0.34s" fill-opacity=".9" x="491.9" y="387.7" width="8.0" height="8.0" rx="1.5" fill="#6B6B6B"/>
 <rect class="p" style="animation-delay:0.36s" fill-opacity=".9" x="370.3" y="242.8" width="8.0" height="8.0" rx="1.5" fill="#6B6B6B"/>
 <rect class="p" style="animation-delay:0.38s" fill-opacity=".9" x="365.8" y="214.9" width="8.0" height="8.0" rx="1.5" fill="#6B6B6B"/>
-<polygon class="p" style="animation-delay:0.40s" fill-opacity=".9" points="499.3,126.8 503.7,134.8 494.9,134.8" fill="#3A3A3A"/>
-<polygon class="p" style="animation-delay:0.42s" fill-opacity=".9" points="422.1,320.7 426.5,328.7 417.7,328.7" fill="#3A3A3A"/>
-<polygon class="p" style="animation-delay:0.44s" fill-opacity=".9" points="198.6,389.9 203.0,397.9 194.2,397.9" fill="#3A3A3A"/>
+<rect class="p" style="animation-delay:0.40s" fill-opacity=".9" x="495.3" y="127.6" width="8.0" height="8.0" rx="1.5" fill="#6B6B6B"/>
+<rect class="p" style="animation-delay:0.42s" fill-opacity=".9" x="418.1" y="321.5" width="8.0" height="8.0" rx="1.5" fill="#6B6B6B"/>
+<rect class="p" style="animation-delay:0.44s" fill-opacity=".9" x="194.6" y="390.7" width="8.0" height="8.0" rx="1.5" fill="#6B6B6B"/>
 <rect class="p" style="animation-delay:0.46s" fill-opacity=".9" x="311.3" y="344.7" width="8.0" height="8.0" rx="1.5" fill="#6B6B6B"/>
-<polygon class="p" style="animation-delay:0.48s" fill-opacity=".9" points="322.8,437.7 327.2,442.7 322.8,447.7 318.4,442.7" fill="#9A9A9A"/>
-<rect class="p" style="animation-delay:0.50s" fill-opacity=".9" x="301.5" y="308.2" width="8.0" height="8.0" rx="1.5" fill="#6B6B6B"/>
-<polygon class="p" style="animation-delay:0.52s" fill-opacity=".9" points="332.5,459.0 336.9,464.0 332.5,469.0 328.1,464.0" fill="#9A9A9A"/>
-<polygon class="p" style="animation-delay:0.54s" fill-opacity=".9" points="364.8,286.8 369.2,294.8 360.4,294.8" fill="#3A3A3A"/>
-<polygon class="p" style="animation-delay:0.56s" fill-opacity=".9" points="127.9,286.2 132.3,294.2 123.5,294.2" fill="#3A3A3A"/>
-<polygon class="p" style="animation-delay:0.58s" fill-opacity=".9" points="204.0,208.6 208.4,216.6 199.6,216.6" fill="#3A3A3A"/>
-<rect class="p" style="animation-delay:0.60s" fill-opacity=".9" x="338.6" y="178.9" width="8.0" height="8.0" rx="1.5" fill="#6B6B6B"/>
-<polygon class="p" style="animation-delay:0.62s" fill-opacity=".9" points="357.9,93.4 362.3,101.4 353.5,101.4" fill="#3A3A3A"/>
-<circle class="p" style="animation-delay:0.64s" fill-opacity=".9" cx="524.7" cy="201.6" r="4.0" fill="#111111"/>
-<polygon class="p" style="animation-delay:0.66s" fill-opacity=".9" points="389.0,88.0 393.4,96.0 384.6,96.0" fill="#3A3A3A"/>
-<polygon class="p" style="animation-delay:0.68s" fill-opacity=".9" points="161.7,278.9 166.1,286.9 157.3,286.9" fill="#3A3A3A"/>
-<polygon class="p" style="animation-delay:0.70s" fill-opacity=".9" points="201.9,139.9 206.3,147.9 197.5,147.9" fill="#3A3A3A"/>
-<circle class="p" style="animation-delay:0.72s" fill-opacity=".9" cx="68.1" cy="197.4" r="4.0" fill="#111111"/>
-<circle class="p" style="animation-delay:0.74s" fill-opacity=".9" cx="50.0" cy="209.7" r="4.0" fill="#111111"/>
-<polygon class="p" style="animation-delay:0.76s" fill-opacity=".9" points="118.7,265.7 123.1,273.7 114.3,273.7" fill="#3A3A3A"/>
-<polygon class="p" style="animation-delay:0.78s" fill-opacity=".9" points="487.6,229.4 492.0,237.4 483.2,237.4" fill="#3A3A3A"/>
-<polygon class="p" style="animation-delay:0.80s" fill-opacity=".9" points="474.6,120.2 479.0,128.2 470.2,128.2" fill="#3A3A3A"/>
-<polygon class="p" style="animation-delay:0.82s" fill-opacity=".9" points="215.4,115.0 219.8,123.0 211.0,123.0" fill="#3A3A3A"/>
-<polygon class="p" style="animation-delay:0.84s" fill-opacity=".9" points="186.3,117.7 190.7,125.7 181.9,125.7" fill="#3A3A3A"/>
-<circle class="p" style="animation-delay:0.86s" fill-opacity=".9" cx="554.1" cy="221.3" r="4.0" fill="#111111"/>
-<polygon class="p" style="animation-delay:0.88s" fill-opacity=".9" points="372.2,69.2 376.6,77.2 367.8,77.2" fill="#3A3A3A"/>
-<circle class="p" style="animation-delay:0.90s" fill-opacity=".9" cx="533.1" cy="232.7" r="4.0" fill="#111111"/>
+<rect class="p" style="animation-delay:0.48s" fill-opacity=".9" x="318.8" y="438.7" width="8.0" height="8.0" rx="1.5" fill="#6B6B6B"/>
+<circle class="p" style="animation-delay:0.50s" fill-opacity=".9" cx="305.5" cy="312.2" r="4.0" fill="#111111"/>
+<rect class="p" style="animation-delay:0.52s" fill-opacity=".9" x="328.5" y="460.0" width="8.0" height="8.0" rx="1.5" fill="#6B6B6B"/>
+<rect class="p" style="animation-delay:0.54s" fill-opacity=".9" x="360.8" y="287.6" width="8.0" height="8.0" rx="1.5" fill="#6B6B6B"/>
+<polygon class="p" style="animation-delay:0.56s" fill-opacity=".9" points="127.9,286.0 132.3,291.0 127.9,296.0 123.5,291.0" fill="#9A9A9A"/>
+<polygon class="p" style="animation-delay:0.58s" fill-opacity=".9" points="204.0,208.4 208.4,213.4 204.0,218.4 199.6,213.4" fill="#9A9A9A"/>
+<polygon class="p" style="animation-delay:0.60s" fill-opacity=".9" points="342.6,177.9 347.0,182.9 342.6,187.9 338.2,182.9" fill="#9A9A9A"/>
+<polygon class="p" style="animation-delay:0.62s" fill-opacity=".9" points="357.9,93.2 362.3,98.2 357.9,103.2 353.5,98.2" fill="#9A9A9A"/>
+<polygon class="p" style="animation-delay:0.64s" fill-opacity=".9" points="524.7,196.8 529.1,204.8 520.3,204.8" fill="#3A3A3A"/>
+<polygon class="p" style="animation-delay:0.66s" fill-opacity=".9" points="389.0,87.8 393.4,92.8 389.0,97.8 384.6,92.8" fill="#9A9A9A"/>
+<polygon class="p" style="animation-delay:0.68s" fill-opacity=".9" points="161.7,278.7 166.1,283.7 161.7,288.7 157.3,283.7" fill="#9A9A9A"/>
+<polygon class="p" style="animation-delay:0.70s" fill-opacity=".9" points="201.9,139.7 206.3,144.7 201.9,149.7 197.5,144.7" fill="#9A9A9A"/>
+<polygon class="p" style="animation-delay:0.72s" fill-opacity=".9" points="68.1,192.4 72.5,197.4 68.1,202.4 63.7,197.4" fill="#9A9A9A"/>
+<polygon class="p" style="animation-delay:0.74s" fill-opacity=".9" points="50.0,204.7 54.4,209.7 50.0,214.7 45.6,209.7" fill="#9A9A9A"/>
+<polygon class="p" style="animation-delay:0.76s" fill-opacity=".9" points="118.7,265.5 123.1,270.5 118.7,275.5 114.3,270.5" fill="#9A9A9A"/>
+<polygon class="p" style="animation-delay:0.78s" fill-opacity=".9" points="487.6,229.2 492.0,234.2 487.6,239.2 483.2,234.2" fill="#9A9A9A"/>
+<polygon class="p" style="animation-delay:0.80s" fill-opacity=".9" points="474.6,120.0 479.0,125.0 474.6,130.0 470.2,125.0" fill="#9A9A9A"/>
+<polygon class="p" style="animation-delay:0.82s" fill-opacity=".9" points="215.4,114.8 219.8,119.8 215.4,124.8 211.0,119.8" fill="#9A9A9A"/>
+<polygon class="p" style="animation-delay:0.84s" fill-opacity=".9" points="186.3,117.5 190.7,122.5 186.3,127.5 181.9,122.5" fill="#9A9A9A"/>
+<polygon class="p" style="animation-delay:0.86s" fill-opacity=".9" points="554.1,216.5 558.5,224.5 549.7,224.5" fill="#3A3A3A"/>
+<polygon class="p" style="animation-delay:0.88s" fill-opacity=".9" points="372.2,69.0 376.6,74.0 372.2,79.0 367.8,74.0" fill="#9A9A9A"/>
+<polygon class="p" style="animation-delay:0.90s" fill-opacity=".9" points="533.1,227.9 537.5,235.9 528.7,235.9" fill="#3A3A3A"/>
 <text x="573.9" y="252.1" fill="#111111" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="10">mythborn</text>
 <text x="602.0" y="239.9" fill="#111111" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="10">wyrmwing</text>
 <text x="378.5" y="192.0" fill="#111111" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="10">Vosk_ReconocimientoDeVoz</text>
@@ -82,17 +82,17 @@
 <path d="M670 70V470" stroke="#D4D4D4"/>
 <text x="690.0" y="92.0" fill="#6E6E6E" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="11" font-weight="700">clusters (k-means)</text>
 <circle  cx="696.0" cy="118.0" r="6.0" fill="#111111"/>
-<text x="712.0" y="122.0" fill="#111111" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="12">c0 · juegos y apps</text>
-<text x="712.0" y="136.0" fill="#6E6E6E" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="10">8 repos</text>
+<text x="712.0" y="122.0" fill="#111111" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="12">c0 · fauna ecuador</text>
+<text x="712.0" y="136.0" fill="#6E6E6E" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="10">5 repos</text>
 <rect  x="690.0" y="146.0" width="12.0" height="12.0" rx="1.5" fill="#6B6B6B"/>
-<text x="712.0" y="156.0" fill="#111111" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="12">c1 · ia y agentes</text>
-<text x="712.0" y="170.0" fill="#6E6E6E" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="10">10 repos</text>
+<text x="712.0" y="156.0" fill="#111111" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="12">c1 · agentes ia</text>
+<text x="712.0" y="170.0" fill="#6E6E6E" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="10">18 repos</text>
 <polygon  points="696.0,178.8 702.6,190.8 689.4,190.8" fill="#3A3A3A"/>
-<text x="712.0" y="190.0" fill="#111111" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="12">c2 · apps web</text>
-<text x="712.0" y="204.0" fill="#6E6E6E" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="10">20 repos</text>
+<text x="712.0" y="190.0" fill="#111111" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="12">c2 · mods minecraft</text>
+<text x="712.0" y="204.0" fill="#6E6E6E" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="10">6 repos</text>
 <polygon  points="696.0,212.5 702.6,220.0 696.0,227.5 689.4,220.0" fill="#9A9A9A"/>
-<text x="712.0" y="224.0" fill="#111111" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="12">c3 · datos e ia</text>
-<text x="712.0" y="238.0" fill="#6E6E6E" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="10">8 repos</text>
+<text x="712.0" y="224.0" fill="#111111" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="12">c3 · apps web</text>
+<text x="712.0" y="238.0" fill="#6E6E6E" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="10">17 repos</text>
 <circle cx="696" cy="260" r="6" fill="none" stroke="#6E6E6E"/>
 <text x="712.0" y="264.0" fill="#6E6E6E" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="11">commits este mes</text>
 <text x="690.0" y="290.0" fill="#6E6E6E" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="11">tamaño = estrellas</text>

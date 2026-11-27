@@ -1,9 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="250" viewBox="0 0 960 250" role="img" aria-label="Contribuciones del último año en GitHub y GitLab: 1271">
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="250" viewBox="0 0 960 250" role="img" aria-label="Contribuciones del último año en GitHub y GitLab: 1284">
 <defs><linearGradient id='scan' x1='0' x2='1'><stop offset='0' stop-color='#FFFFFF' stop-opacity='0'/><stop offset='1' stop-color='#FFFFFF' stop-opacity='.35'/></linearGradient></defs>
 <style>@keyframes pop { from { opacity: .25 } to { opacity: 1 } } .col { animation: pop .5s ease-out both }@keyframes scan { 0% { transform: translateX(0) } 100% { transform: translateX(848px) } } .scan { animation: scan 7s linear infinite }</style>
 <rect width="960" height="250" rx="14" fill="#111111" stroke="#2B2B2B"/>
 <text x="20.0" y="30.0" fill="#FFFFFF" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="13" font-weight="700">git log --since=&quot;1 year&quot; --all</text>
-<text x="940.0" y="30.0" fill="#8C8C8C" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="10" text-anchor="end">1271 contribuciones · 138 días activos · racha máx. 11 días</text>
+<text x="940.0" y="30.0" fill="#8C8C8C" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="10" text-anchor="end">1284 contribuciones · 139 días activos · racha máx. 12 días</text>
 <text x="52.0" y="108.0" fill="#8C8C8C" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="10" text-anchor="end">lun</text>
 <text x="52.0" y="140.0" fill="#8C8C8C" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="10" text-anchor="end">mié</text>
 <text x="52.0" y="172.0" fill="#8C8C8C" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="10" text-anchor="end">vie</text>
@@ -122,7 +122,7 @@
 <rect x="254" y="82" width="13" height="13" rx="3" fill="#2B2B2B"/>
 <rect x="254" y="98" width="13" height="13" rx="3" fill="#2B2B2B"/>
 <rect x="254" y="114" width="13" height="13" rx="3" fill="#2B2B2B"/>
-<rect x="254" y="130" width="13" height="13" rx="3" fill="#A3A3A3" fill-opacity="1"><title>2026-02-18: 0 GitHub, 12 GitLab</title></rect>
+<rect x="254" y="130" width="13" height="13" rx="3" fill="#A3A3A3" fill-opacity="0.78"><title>2026-02-18: 0 GitHub, 12 GitLab</title></rect>
 <rect x="254" y="146" width="13" height="13" rx="3" fill="#A3A3A3" fill-opacity="0.35"><title>2026-02-19: 0 GitHub, 2 GitLab</title></rect>
 <rect x="254" y="162" width="13" height="13" rx="3" fill="#A3A3A3" fill-opacity="0.35"><title>2026-02-20: 0 GitHub, 2 GitLab</title></rect>
 <rect x="254" y="178" width="13" height="13" rx="3" fill="#2B2B2B"/>
@@ -382,7 +382,7 @@
 <rect x="702" y="98" width="13" height="13" rx="3" fill="#2B2B2B"/>
 <rect x="702" y="114" width="13" height="13" rx="3" fill="#2B2B2B"/>
 <rect x="702" y="130" width="13" height="13" rx="3" fill="#FFFFFF" fill-opacity="1"><title>2026-09-02: 41 GitHub, 0 GitLab</title></rect>
-<rect x="702" y="146" width="13" height="13" rx="3" fill="#FFFFFF" fill-opacity="1"><title>2026-09-03: 12 GitHub, 0 GitLab</title></rect>
+<rect x="702" y="146" width="13" height="13" rx="3" fill="#FFFFFF" fill-opacity="0.78"><title>2026-09-03: 12 GitHub, 0 GitLab</title></rect>
 <rect x="702" y="162" width="13" height="13" rx="3" fill="#FFFFFF" fill-opacity="1"><title>2026-09-04: 17 GitHub, 0 GitLab</title></rect>
 <rect x="702" y="178" width="13" height="13" rx="3" fill="#2B2B2B"/>
 </g>
@@ -411,7 +411,7 @@
 <rect x="750" y="130" width="13" height="13" rx="3" fill="#2B2B2B"/>
 <rect x="750" y="146" width="13" height="13" rx="3" fill="#2B2B2B"/>
 <rect x="750" y="162" width="13" height="13" rx="3" fill="#FFFFFF" fill-opacity="1"><title>2026-09-25: 14 GitHub, 0 GitLab</title></rect>
-<rect x="750" y="178" width="13" height="13" rx="3" fill="#FFFFFF" fill-opacity="1"><title>2026-09-26: 12 GitHub, 0 GitLab</title></rect>
+<rect x="750" y="178" width="13" height="13" rx="3" fill="#FFFFFF" fill-opacity="0.78"><title>2026-09-26: 12 GitHub, 0 GitLab</title></rect>
 </g>
 <text x="766.0" y="72.0" fill="#8C8C8C" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="10">oct</text>
 <g class="col" style="animation-delay:1.100s">
@@ -471,7 +471,7 @@
 </g>
 <g class="col" style="animation-delay:1.250s">
 <rect x="862" y="82" width="13" height="13" rx="3" fill="#A3A3A3" fill-opacity="1"><title>2026-11-08: 0 GitHub, 19 GitLab</title></rect>
-<rect x="862" y="98" width="13" height="13" rx="3" fill="#A3A3A3" fill-opacity="1"><title>2026-11-09: 0 GitHub, 12 GitLab</title></rect>
+<rect x="862" y="98" width="13" height="13" rx="3" fill="#A3A3A3" fill-opacity="0.78"><title>2026-11-09: 0 GitHub, 12 GitLab</title></rect>
 <rect x="862" y="114" width="13" height="13" rx="3" fill="#A3A3A3" fill-opacity="1"><title>2026-11-10: 0 GitHub, 14 GitLab</title></rect>
 <rect x="862" y="130" width="13" height="13" rx="3" fill="#2B2B2B"/>
 <rect x="862" y="146" width="13" height="13" rx="3" fill="#A3A3A3" fill-opacity="0.35"><title>2026-11-12: 0 GitHub, 1 GitLab</title></rect>
@@ -492,13 +492,14 @@
 <rect x="894" y="98" width="13" height="13" rx="3" fill="#A3A3A3" fill-opacity="1"><title>2026-11-23: 1 GitHub, 26 GitLab</title></rect>
 <rect x="894" y="114" width="13" height="13" rx="3" fill="#A3A3A3" fill-opacity="1"><title>2026-11-24: 17 GitHub, 26 GitLab</title></rect>
 <rect x="894" y="130" width="13" height="13" rx="3" fill="#A3A3A3" fill-opacity="1"><title>2026-11-25: 12 GitHub, 14 GitLab</title></rect>
-<rect x="894" y="146" width="13" height="13" rx="3" fill="#A3A3A3" fill-opacity="0.78"><title>2026-11-26: 0 GitHub, 9 GitLab</title></rect>
+<rect x="894" y="146" width="13" height="13" rx="3" fill="#A3A3A3" fill-opacity="1"><title>2026-11-26: 0 GitHub, 17 GitLab</title></rect>
+<rect x="894" y="162" width="13" height="13" rx="3" fill="#A3A3A3" fill-opacity="0.55"><title>2026-11-27: 0 GitHub, 5 GitLab</title></rect>
 </g>
 <rect class="scan" x="2" y="78" width="60" height="116" fill="url(#scan)"/>
 <rect x="62" y="210" width="11" height="11" rx="2" fill="#FFFFFF"/>
 <text x="79.0" y="220.0" fill="#F5F5F5" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="11">GitHub 634</text>
 <rect x="182" y="210" width="11" height="11" rx="2" fill="#A3A3A3"/>
-<text x="199.0" y="220.0" fill="#F5F5F5" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="11">GitLab 637</text>
+<text x="199.0" y="220.0" fill="#F5F5F5" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="11">GitLab 650</text>
 <text x="787.0" y="220.0" fill="#8C8C8C" font-family="ui-monospace,SFMono-Regular,Consolas,Menlo,monospace" font-size="10" text-anchor="end">menos</text>
 <rect x="795" y="210" width="11" height="11" rx="2" fill="#2B2B2B"/>
 <rect x="810" y="210" width="11" height="11" rx="2" fill="#FFFFFF" fill-opacity="0.35"/>
